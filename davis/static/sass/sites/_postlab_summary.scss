@@ -1,0 +1,32 @@
+// postlab_summary_scss
+
+.postlab-summary-title {
+  @extend .so-title;
+  @include border-init($color-b-title, 2px);
+  @include border-radius-init(3px, 3px, 3px, 0, 0);
+  background: $color-b-title;
+  color: white;
+  text-decoration: none;
+}
+
+.postlab-summary-content {
+  @include border-init($color-card-border, 1px);
+  @include border-radius-init(3px, 0, 0, 3px, 3px);
+  border-top: 0;
+  padding: 2em;
+  font-family: $font-regular;
+  font-size: 18px;
+}
+
+.postlab-card-title {
+  display: inline-block;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 0;
+  font-size: 20px;
+}
+
+.postlab-card-title.title-underline {
+  border-bottom: 2px solid $p-color-content;
+  padding: 0;
+}

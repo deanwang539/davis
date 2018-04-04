@@ -1,0 +1,248 @@
+// _misc.scss
+// border, underline, hover styles and etc.
+
+.border-green {
+  border-color: $color-g-border;
+}
+
+.border-blue {
+  border-color: $color-b-border;
+}
+
+.title-blue {
+  background: $color-b-title;
+  border-color: $color-b-title;
+}
+
+.title-green {
+  background: $color-g-title;
+  border-color: $color-g-title;
+}
+
+.title-orange {
+  background: $color-o-title;
+  border-color: $color-o-title;
+}
+
+.title-purple {
+  background: $color-p-title;
+  border-color: $color-p-title;
+}
+
+.title-underline {
+  @include border-init($color-title-border, 2px);
+  padding-bottom: 10px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.blk-underline {
+  @extend .title-underline;
+  border-color: $p-color-content;
+  padding: 0;
+}
+
+.content-quote {
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  color: $color-quote;
+}
+
+input.form-control::-webkit-input-placeholder {
+  font-family: $font-light !important;
+  color: $p-color-content !important;
+}
+
+.custom-select {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-input-hover;
+    border-color: $color-input-hover;
+  }
+}
+
+input.form-control {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-input-hover;
+    border-color: $color-input-hover;
+  }
+}
+
+.form-control[disabled] {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-input-disable-font !important;
+    border-color: $color-input-disable-border !important;
+    background: $color-input-disable !important;
+  }
+}
+
+.trial-accordion {
+  .exp-title {
+    p:hover {
+      color:$color-text-hover;
+      cursor:pointer;
+    }
+  }
+}
+
+.formula-card {
+  padding: 0 10px;
+}
+
+.formula-title {
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.formula-input {
+  display: inline-block;
+  input {
+    width: 90px !important;
+    height: 40.5px;
+    border-radius: 3px;
+  }
+}
+
+.formula-unit {
+  @extend .col-form-unit;
+  margin-left: 0;
+  .types-select {
+    width: 95px !important;
+  }
+  .units-select {
+    width: 95px !important;
+    margin: 0;
+  }
+}
+
+.formula-opt {
+  @extend .custom-select;
+  display: inline-block;
+  width: 50px;
+}
+
+.postlab-opt {
+  width: 35px;
+}
+
+.formula-equal {
+  display: inline-block;
+  width: 30px;
+}
+
+.formula-divide {
+  display: inline;
+  position: relative;
+  top: -1em;
+}
+
+.report-card {
+  padding: 1em;
+  font-family: $font-regular;
+  div {
+    font-family: $font-light;
+    display: inline-block;
+  }
+}
+
+.report-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.report-divide {
+  @extend .formula-divide;
+  top: -0.5em;
+  .divider {
+    border-color: $p-color-content;
+    margin: 0 3em;
+  }
+}
+
+.report-result {
+  margin: 0 3em;
+}
+
+.select-disabled {
+  color: $color-input-disable-font !important;
+  border-color: $color-input-disable-border !important;
+  background: $color-input-disable !important;
+}
+
+.no-min-height {
+  min-height: 0 !important;
+}
+
+// modal
+
+.modal {
+  font-family: $font-bold;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9999 !important;
+}
+
+.modal-dialog{
+  position: relative;
+  display: table; /* This is important */
+  overflow-y: auto;
+  overflow-x: auto;
+  width: auto;
+  min-width: 450px;
+}
+
+.modal-title {
+  display: inline-block;
+}
+
+.modal-header {
+  // background-color: #d9534f;
+  background: #f5dc54;
+  border-color: #f5dc54;
+  color: #8a6d3b;
+}
+
+.modal-body {
+  padding: 30px 15px;
+  .warning-sign {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  p {
+    font-family: $font-light;
+    font-size: 1.8em;
+    color: #8a6d3b;
+    margin: 1.3em 0 0 0;
+  }
+}
+
+.modal-footer {
+  .btn {
+    font-size: 16px;
+    color: #8a6d3b;
+    width: 100%;
+    margin-bottom: 0;
+    background: #f5dc54;
+    border-color: #f5dc54;
+    &:hover,
+    &:focus,
+    &:active {
+      background: #fde66b;
+    }
+  }
+}
+
+.modal-backdrop.fade.in {
+  opacity: 0 !important;
+}
+
+.flash-msg {
+  color: #801210;
+}

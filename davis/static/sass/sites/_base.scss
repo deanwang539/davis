@@ -1,0 +1,130 @@
+// _base.scss
+
+a.disabled {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+.right_col {
+  position: relative;
+  top: 58px;
+  background: $color-right-col !important;
+}
+
+.user-profile {
+  font-size: 14px;
+}
+
+.tooltip-container {
+  position: absolute;
+  left: -195px !important;
+  top: 39px;
+  width: 316px;
+  height: 275px;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.tooltip-bg {
+  position: absolute;
+}
+
+.tooltip-content {
+  position: absolute;
+  font-family: $font-light;
+}
+// tooltip profile
+
+.tooltip-profile {
+  position: absolute;
+}
+
+.tooltip-img {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 118px;
+  height: 118px;
+}
+
+.tooltip-title {
+  position: absolute;
+  top: 50px;
+  left: 150px;
+  font-size: 18px;
+  color: $p-color-text;
+  white-space: nowrap;
+}
+
+.tooltip-subtitle {
+  @extend .tooltip-title;
+  top: 75px;
+  font-size: 14px;
+  color: $s-color-text;
+}
+
+.tooltip-edit {
+  @extend .tooltip-subtitle;
+  top: 110px;
+  font-size: 12px;
+}
+
+.tooltip-note {
+  @extend .tooltip-edit;
+  left: 218px;
+}
+// tooltip menu
+
+.tooltip-menu {
+  position: absolute;
+  left: 10px;
+  font-family: $font-light;
+}
+
+.tooltip-setting {
+  @include border-init($p-color-menu-border, 1px);
+  position: absolute;
+  top: 160px;
+  width: 316px;
+  height: 41px;
+  padding: 10px;
+  background-color: white;
+  font-size: 16px;
+  color: $s-color-text;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.tooltip-help {
+  @extend .tooltip-setting;
+  @include border-init($s-color-menu-border, 1px);
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  top: 201px;
+}
+
+.tooltip-edit,
+.tooltip-note {
+  p {
+    &:hover {
+      color: $color-text-hover;
+      cursor: pointer;
+    }
+  }
+}
+
+.tooltip-help,
+.tooltip-setting {
+  &:hover {
+    background: $color-menu-hover;
+    color: $color-text-hover;
+    cursor: pointer;
+  }
+}

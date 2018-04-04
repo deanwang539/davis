@@ -1,0 +1,55 @@
+// _color_picker.scss
+.det-color-picker {
+  padding: 5px;
+}
+
+.det-img {
+  display: block;
+  margin-bottom: 1px;
+  border-radius: 3px;
+}
+
+.det-slider {
+  width: 300px;
+}
+
+.det-color-picker {
+  .slider-track,
+  .slider-selection {
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+}
+
+.det-color-picker {
+  .slider-track {
+    .slider-handle {
+     background-color: transparent !important;
+     background-image: none !important;
+     box-shadow: none !important;
+     border-radius: 0 !important;
+     opacity: 1 !important;
+     transform: rotate(45deg);
+   }
+  }
+}
+
+.det-color-pointer {
+	font-size: 20px;
+  color: #ff01ff;
+  opacity: 0.5;
+}
+
+.det-color-square {
+  position: absolute;
+  top: -5px;
+  left: 340px;
+  width: 50px;
+  height: 50px;
+  background: #ff01ff;
+  opacity: 0.5;
+  border: 1px solid #73879C;
+  border-radius: 3px;
+}

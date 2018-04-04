@@ -1,0 +1,60 @@
+// _buttons.scss
+
+.tooltip-button {
+  @include btn-logout($color-rbtn, $font-bold);
+}
+
+.regular-button {
+  @include btn-common($color-rbtn, $font-bold);;
+}
+
+.regular-button,
+.tooltip-button {
+  &:hover {
+    background: $color-rbtn-hover;
+    cursor: pointer;
+  }
+}
+
+.save-btn {
+  margin-top: -1em;
+  background: $color-bbtn;
+  &:hover {
+    background: $color-bbtn-hover;
+    cursor:pointer;
+  }
+}
+
+.trial-accordion {
+   .save-btn {
+     margin-top: 0;
+     background: transparent;
+     div {
+       background: $color-bbtn;
+       &:hover {
+         background: $color-bbtn-hover;
+         cursor:pointer;
+       }
+     }
+   }
+}
+
+.print-btn {
+  background: $color-bbtn;
+  &:hover {
+    background: $color-bbtn-hover;
+    cursor:pointer;
+  }
+}
+
+.new-trial-btn {
+  background: $color-gbtn;
+  &:hover {
+    background: $color-gbtn-hover;
+    cursor:pointer;
+  }
+}
+
+#postlab_print {
+  @extend .new-trial-btn;
+}

@@ -1,0 +1,90 @@
+// _pp2.scss
+
+.pp2-card {
+  @extend .pp1-card;
+  &:nth-child(6n+1) > .pp1-title {
+    background: $color-o-title;
+    border-color: $color-o-title;
+  }
+  &:nth-child(6n+2) > .pp1-title {
+    background: $color-p-title;
+    border-color: $color-p-title;
+  }
+  &:nth-child(6n+3) > .pp1-title {
+    background: $color-g-title;
+    border-color: $color-g-title;
+  }
+  &:nth-child(6n+4) > .pp1-title {
+    background: $color-b-title;
+    border-color: $color-b-title;
+  }
+  &:nth-child(6n+5) > .pp1-title {
+    background: $color-title;
+    border-color: $color-title;
+  }
+}
+
+.pp2-title {
+  @extend .pp1-title;
+  padding-left: 2em;
+  text-indent: 0;
+}
+
+.pp2-content {
+  @extend .pp1-content;
+  font-size: 14px;
+  table {
+    color: $p-color-text;
+    margin: 1em 0 0 1em !important;
+    th, td {
+      border: 0 !important;
+    }
+  }
+}
+
+.pp2-input {
+  position: relative;
+  display: inline-block;
+  margin: 30px 1em;
+}
+
+.pp2-fill-blank {
+  position: relative;
+  color: $p-color-text;
+  font-family: $font-light;
+  font-size: 16px;
+  margin: 1em;
+  line-height: 3;
+}
+
+.pp2-fill-blank {
+  .form-control {
+    display: inline-block;
+    width: 130px;
+    height: 40.5px;
+    border-radius: 3px;
+  }
+}
+
+.custom-select {
+  width: 108px;
+  height: 40.5px;
+  border-radius: 3px;
+  border-width: 1px;
+  border-color: $color-input-border;
+  margin: 0 .8em;
+}
+
+.fb-custom-select {
+  @extend .custom-select;
+  width: 130px;
+  margin: 0;
+}
+
+.pp2-btn-pos {
+  padding-top: 0;
+}
+
+.pp2-btn {
+  margin-top: -1em;
+}

@@ -1,0 +1,12 @@
+var units = {
+  "Amount of Something": ["mol"],
+  "Concentration": ["M", "%w/w"],
+  "Density": ["g/cm&sup3", "kg/L"],
+  "Electric Potential": ["V", "mV"],
+  "Energy": ["J", "kJ", "Cal", "cal"],
+  "Mass": ["g", "kg"],
+  "Length": ["nm", "mm", "cm", "m", "km"],
+  "Temperature": ["K", "°C", "°F"],
+  "Time": ["S", "min", "hr"],
+  "Volume": ["mL", "L", "m&sup3"]
+}

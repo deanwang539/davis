@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% from 'models/macros.html' import macros %}
+{% block title %}Summary{% endblock %}
+{% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white">
+    <div class="row">
+      <div class="exp-title">
+        <p class="text-uppercase title-underline">SUMMARY</p>
+      </div>
+      <div class='col-sm-12 col-padding'>
+        <div class='summary-card'>
+          <div class='summary-title text-uppercase text-center'>titration trial report</div>
+          <div class="summary-content">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Trial #</th>
+                  <th>Volume Base</th>
+                  <th>Volume Acid</th>
+                  <th>Solution Color</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>1 mL</td>
+                  <td>2 mL</td>
+                  <td>
+                    <div class="summary-color-square"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>1.2 mL</td>
+                  <td>3.14 mL</td>
+                  <td>
+                    <div class="summary-color-square"></div>
+                  </td>
+                </tr>
+                <!-- <tr data-toggle="popover" data-placement="bottom" data-original-title="TOP POPOVER" data-content=""> -->
+                <tr>
+                  <th scope="row">3</th>
+                  <td>1.2 mL</td>
+                  <td>3.14 mL</td>
+                  <td>
+                    <div class="summary-color-square"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- test -->
+          <!-- <div id="popoverContent" style="display: none">
+            <div>
+              <table border="1" style="width:100%">
+                <tr>
+                  <th width="30%">Comment date</th>
+                  <th width="70%">Comment</th>
+                </tr>
+                <tr>
+                  <td>12/03/2015 16:45</td>
+                  <td>*Username - Testing1</td>
+                </tr>
+                <tr>
+                  <td>12/03/2015 16:55</td>
+                  <td>*Username - Testing2</td>
+                </tr>
+                <tr>
+                  <td>12/03/2015 17:13</td>
+                  <td>*Username - Testing3</td>
+                </tr>
+              </table>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="col-sm-2 col-sm-offset-8 btn-padding summary-btn-pos">
+        <div id='summary_print' class="regular-button print-btn text-center text-uppercase"><a href="javascript:;">print</a></div>
+      </div>
+      <div class="col-sm-2 btn-padding summary-btn-pos">
+        <div class="regular-button summary-btn text-center text-uppercase"><a href="javascript:;">continue</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br> &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

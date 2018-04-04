@@ -1,0 +1,397 @@
+<!-- exp3 -->
+<div class="col-sm-4 col-padding">
+  <div class="exp-card">
+    <figure class="figure">
+      <!-- ihover -->
+      <div class="ih-item square colored-green effect13 right_to_left">
+        <a href="javascript:;">
+          <div class="img"><img src="{{ url_for('static', filename='images/exp3.png') }}" alt="img"></div>
+          <div class="info">
+            <div class="info-content">
+              <h3>Heading here</h3>
+              <p>Description goes here</p>
+            </div>
+            <div class="info-check">
+              <img src="{{ url_for('static', filename='images/check.png') }}" alt="img">
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- end ihover -->
+      <figcaption class="figure-caption text-center">
+        <span class="text-uppercase card-name">experiment 3</span>
+        <br>
+        <span class="card-date">July 17th, 2017</span>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<!-- end exp3 -->
+
+<!-- purpose content -->
+<div class="col-sm-9 purpose-content">
+  <h1 class="purpose-heading">Background</h1>
+  <p class="purpose-p">Determine the concentration of an acidic solution by titration with a base.</p>
+  <h1 class="purpose-heading">Tutorial</h1>
+  <p class="purpose-tutorial">Below is a video of the titration you will be doing:</p>
+  <iframe class="purpose-video" width="560" height="315" src="https://www.youtube.com/embed/ukSR_2D_7Ug" frameborder="0" allowfullscreen></iframe>
+  <h1 class="purpose-heading">Formula</h1>
+  <p class="purpose-formula">
+    By titrating an acidic solution of unknown concentration with a basic solution of known concentration, one will be able to determine the concentration of the acid by neutralization. By determining the moles of base, the moles of acid and the concentration of the acid can be determined. This can be done using the equation below:<br><br><span class="purpose-formula-break">n = MV</span><br>The concentration(M) of a solution in units mol/L multiplied by the volume(V) of a solution in units of L is equivalent to the moles(n) in solution. To determine the number of atoms or molecules involved, remember that a mole is equal to 6.02x1023.
+  </p>
+</div>
+
+
+// init tocify
+$('.purpose-title').tocify();
+
+// adjust tocify position when scrolling
+if(!$PO_CONTENT.offset()) return;
+
+var dist = $PO_CONTENT.offset().top;
+$(window).on('scroll', function(){
+  var scroll_dist = $(window).scrollTop();
+  if(scroll_dist >= dist) {
+    $('.tocify').addClass('tocify-stop-scroll');
+  }else {
+    $('.tocify').removeClass('tocify-stop-scroll');
+  }
+});
+
+<!-- procedure content -->
+<h1 class="purpose-heading">Step 1</h1>
+<p class="procedure-p">Add about 50 mL of NaOH to the burette using the funnel. Make sure the stopcock is closed. Record the initial volume in the burette by the location of the meniscus like in the picture below.</p>
+<img class="procedure-img" src="../static/images/meniscus_eye_level.png" alt="...">
+<h1 class="purpose-heading">Step 2</h1>
+<p class="procedure-p">Measure out 100 mL of HCl in a volumetric flask. Transfer the HCl to an Erlenmeyer flask.</p>
+<h1 class="purpose-heading">Step 3</h1>
+<p class="procedure-p">Add 2-3 drops of Phenolphthalein to the Erlenmeyer flask.</p>
+<h1 class="purpose-heading">Step 4</h1>
+<p class="procedure-p">Arrange the burette and Erlenmeyer flask in the set up below.</p>
+<img class="procedure-img" src="../static/images/titration_setup.png" alt="...">
+<h1 class="purpose-heading">Step 5</h1>
+<p class="procedure-p">Open the stopcock and allow the NaOH to slowly enter the Erlenmeyer flask one drop at a time. Mix the solution between each drop of NaOH.</p>
+<h1 class="purpose-heading">Step 6</h1>
+<p class="procedure-p">Close the stopcock when the solution in the Erlenmeyer flask turns a faint pink color that does not disappear with mixing. Placing white paper under the Erlenmeyer flask may make the color easier to see. Record the final volume in the burette by the location of the meniscus.</p>
+<img class="procedure-img-20" src="../static/images/titration_before.png" alt="...">
+<img class="procedure-img-20" src="../static/images/titration_after.png" alt="...">
+<h1 class="purpose-heading">Step 7</h1>
+<p class="procedure-p">7.	Repeat the titration two more times for a total of three trials recording the initial and final volumes in the burette for each trial.</p>
+
+<!-- pp1-content -->
+<!-- card 1 -->
+<div class='pp1-card'>
+  <div class='pp1-title'>
+    1. You are working on the titration lab when HCl is splashed on you. Holes begin to appear in your lab coat. What is the first thing you should do?
+  </div>
+  <div class='pp1-content'>
+    <ul>
+      <li>
+        <input type="radio" id="option-1" name="selector-1">
+        <label for="option-1">A. Dry your shirt off with paper towel.</label>
+        <div class="check"></div>
+      </li>
+      <li>
+        <input type="radio" id="option-2" name="selector-1">
+        <label for="option-2">B. Pour NaOH of similar concentration on your shirt to neutralize the acid.</label>
+        <div class="check"><div class="inside"></div></div>
+      </li>
+      <li>
+        <input type="radio" id="option-3" name="selector-1">
+        <label for="option-3">C. Use the shower in the lab for about 15 minutes.</label>
+        <div class="check"><div class="inside"></div></div>
+      </li>
+      <li>
+        <input type="radio" id="option-4" name="selector-1">
+        <label for="option-4">D. Switch your lab coat to one that does not have chemicals on it.</label>
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- card 2 -->
+<div class='pp1-card'>
+  <div class='pp1-title pp1-title-blue'>
+    2. You are working on the titration lab when NaOH gets on your skin. It begins to burn. What is the first thing
+you should do?
+  </div>
+  <div class='pp1-content'>
+    <ul>
+      <li>
+        <input type="radio" id="option-5" name="selector-2">
+        <label for="option-5">A. Pour HCl on the area to neutralize the base.</label>
+        <div class="check"></div>
+      </li>
+      <li>
+        <input type="radio" id="option-6" name="selector-2">
+        <label for="option-6">B. Wash the area thoroughly for about 15 minutes.</label>
+        <div class="check"><div class="inside"></div></div>
+      </li>
+      <li>
+        <input type="radio" id="option-7" name="selector-2">
+        <label for="option-7">C. Dry the area off with paper towel.</label>
+        <div class="check"><div class="inside"></div></div>
+      </li>
+      <li>
+        <input type="radio" id="option-8" name="selector-2">
+        <label for="option-8">D. Cover the area with a bandage.</label>
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- card 3 -->
+<div class='pp1-card'>
+  <div class='pp1-title pp1-title-green'>
+    3. You have finished the lab and are cleaning up. Where should you dispose of the excess NaOH and
+neutralized solution?
+  </div>
+  <div class='pp1-content'>
+    <ul>
+      <li>
+        <input type="radio" id="option-9" name="selector-3">
+        <label for="option-9">A. Pour both down the drain in the sink.</label>
+        <div class="check"></div>
+      </li>
+      <li>
+        <input type="radio" id="option-10" name="selector-3">
+        <label for="option-10">B. Pour the neutralized solution down the drain, but pour the NaOH in the labelled NaOH waste container.</label>
+        <div class="check"><div class="inside"></div></div>
+      </li>
+      <li>
+        <input type="radio" id="option-11" name="selector-3">
+        <label for="option-11">C. Pour the neutralized solution in a labelled waste container for HCl, NaOH, and phenolphthalein. Excess
+NaOH can be poured back into the stock solution bottle.</label>
+        <div class="check"><div class="inside"></div></div>
+      </li>
+      <li>
+        <input type="radio" id="option-12" name="selector-3">
+        <label for="option-12">D. Pour both solutions into the labelled waste container for each solution respectively.</label>
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- pp2 content -->
+<!-- card 1 -->
+<div class='pp1-card'>
+  <div class='pp1-title no-indent pp1-title-orange'>
+    A titration was performed using the procedure above; 100 mL of HCl was titrated with 0.1M NaOH. Based on data recorded below, answer the questions 4 and 5.
+  </div>
+  <div class='pp2-content'>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Volume Base</th>
+          <th>Volume Acid</th>
+          <th>Base Concentration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10.2 mL</td>
+          <td>99.8 mL</td>
+          <td>0.1 M</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- card 2 -->
+<div class='pp1-card'>
+  <div class='pp1-title no-indent pp1-title-purple'>
+    4. Determine the average amount of base used for the three trials.
+  </div>
+  <div class='pp1-content cancel-bottom-padding'>
+    <span class='pp2-input'>
+      <input class="basic-slide" id="ans-1" type="text" placeholder="Type number!" /><label for="ans-1">Answer</label>
+    </span>
+    <select class="custom-select types-select">
+      <option value='null'>- Unit Type -</option>
+    </select>
+    <select class="custom-select units-select select-disabled" disabled>
+      <option value='null'>- Unit -</option>
+    </select>
+  </div>
+</div>
+
+<!-- card 3 -->
+<div class='pp1-card'>
+  <div class='pp1-title no-indent pp1-title-green'>
+    5. Determine concentration of the acid.
+  </div>
+  <div class='pp1-content cancel-bottom-padding'>
+    <span class='pp2-input'>
+      <input class="basic-slide" id="ans-2" type="text" placeholder="Type number!" /><label for="ans-2">Answer</label>
+    </span>
+    <select class="custom-select types-select">
+      <option value='null'>- Unit Type -</option>
+    </select>
+    <select class="custom-select units-select select-disabled" disabled>
+      <option value='null'>- Unit -</option>
+    </select>
+  </div>
+</div>
+
+<!-- new!!! -->
+<!-- pp1 -->
+<!-- card 1 -->
+<div class='pp1-card'>
+  <div class='pp1-title'>
+    <p>1. You are working on the titration lab when HCl is splashed on you. Holes begin to appear in your lab coat. What is the first thing you should do?</p>
+  </div>
+  <div class='pp1-content'>
+    <div class="radio">
+      <input id="1-1" value="1" name="1" type="radio">
+      <label for="1-1" class="radio-label">A. Dry your shirt off with paper towel.</label>
+    </div>
+    <div class="radio">
+      <input id="1-2" value="2" name="1" type="radio">
+      <label  for="1-2" class="radio-label">B. Pour NaOH of similar concentration on your shirt to neutralize the acid.</label>
+    </div>
+    <div class="radio">
+      <input id="1-3" value="3" name="1" type="radio">
+      <label  for="1-3" class="radio-label">C. Use the shower in the lab for about 15 minutes.</label>
+    </div>
+    <div class="radio">
+      <input id="1-4" value="4" name="1" type="radio">
+      <label for="1-4" class="radio-label">D. Switch your lab coat to one that does not have chemicals on it.</label>
+    </div>
+  </div>
+</div>
+
+<!-- card 2 -->
+<div class='pp1-card'>
+  <div class='pp1-title'>
+    2. You are working on the titration lab when NaOH gets on your skin. It begins to burn. What is the first thing you should do?
+  </div>
+  <div class='pp1-content'>
+    <div class="radio">
+      <input id="2-1" value="1" name="2" type="radio">
+      <label for="2-1" class="radio-label">A. Pour HCl on the area to neutralize the base.</label>
+    </div>
+    <div class="radio">
+      <input id="2-2" value="2" name="2" type="radio">
+      <label for="2-2" class="radio-label">B. Wash the area thoroughly for about 15 minutes.</label>
+    </div>
+    <div class="radio">
+      <input id="2-3" value="3" name="2" type="radio">
+      <label for="2-3" class="radio-label">C. Dry the area off with paper towel.</label>
+    </div>
+    <div class="radio">
+      <input id="2-4" value="4" name="2" type="radio">
+      <label for="2-4" class="radio-label">D. Cover the area with a bandage.</label>
+    </div>
+  </div>
+</div>
+
+<!-- card 3 -->
+<div class='pp1-card'>
+  <div class='pp1-title'>
+  3. You have finished the lab and are cleaning up. Where should you dispose of the excess NaOH and neutralized solution?
+  </div>
+  <div class='pp1-content'>
+    <div class="radio">
+      <input id="3-1" value="1" name="3" type="radio">
+      <label for="3-1" class="radio-label">A. Pour both down the drain in the sink.</label>
+    </div>
+    <div class="radio">
+      <input id="3-2" value="2" name="3" type="radio">
+      <label for="3-2" class="radio-label">B. Pour the neutralized solution down the drain, but pour the NaOH in the labelled NaOH waste container.</label>
+    </div>
+    <div class="radio">
+      <input id="3-3" value="3" name="3" type="radio">
+      <label for="3-3" class="radio-label">C. Pour the neutralized solution in a labelled waste container for HCl, NaOH, and phenolphthalein. Excess NaOH can be poured back into the stock solution bottle.</label>
+    </div>
+    <div class="radio">
+      <input id="3-4" value="4" name="3" type="radio">
+      <label for="3-4" class="radio-label">D. Pour both solutions into the labelled waste container for each solution respectively.</label>
+    </div>
+  </div>
+</div>
+
+<!-- pp2 -->
+<!-- card 1 -->
+<div class='pp2-card'>
+  <div class='pp2-title'>
+  A titration was performed using the procedure above; 100 mL of HCl was titrated with 0.1M NaOH. Based on data recorded below, answer the questions 4 and 5.
+  </div>
+  <div class='pp2-content'>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Volume Base</th>
+          <th>Volume Acid</th>
+          <th>Base Concentration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10.2 mL</td>
+          <td>99.8 mL</td>
+          <td>0.1 M</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- card 2 -->
+<div class='pp2-card'>
+  <div class='pp2-title'>
+    4. Determine the average amount of base used for the three trials.
+  </div>
+  <div class='pp2-content'>
+    <span class='pp2-input'>
+      <input class="basic-slide" id="pp2-input-1" type="text" placeholder="Type number!" /><label for="pp2-input-1">Answer</label>
+    </span>
+    <select class="custom-select types-select">
+      <option value='null'>- Unit Type -</option>
+    </select>
+    <select class="custom-select units-select select-disabled" disabled>
+      <option value='null'>- Unit -</option>
+    </select>
+  </div>
+</div>
+
+<!-- card 3 -->
+<div class='pp2-card'>
+  <div class='pp2-title'>
+    5. Determine concentration of the acid.
+  </div>
+  <div class='pp2-content'>
+    <span class='pp2-input'>
+      <input class="basic-slide" id="pp2-input-2" type="text" placeholder="Type number!" /><label for="pp2-input-2">Answer</label>
+    </span>
+    <select class="custom-select types-select">
+      <option value='null'>- Unit Type -</option>
+    </select>
+    <select class="custom-select units-select select-disabled" disabled>
+      <option value='null'>- Unit -</option>
+    </select>
+  </div>
+</div>
+
+<!-- card 4 -->
+<div class='pp2-card'>
+  <div class='pp2-title'>
+    6. Hypothesis
+  </div>
+  <div class='pp2-content'>
+    <div class="pp2-fill-blank">
+    If the concentration of HCl is greater than the concentration of NaOH, the volume of NaOH required to neutralize the solution of HCl will be
+    <select class="form-control fb-custom-select">
+      <option value="1">greater than</option>
+      <option value="-1">less than</option>
+      <option value="0">equal to</option>
+    </select>
+    the volume of HCl because the neutralization of HCl with NaOH requires a
+    <input class="form-control" id="pp2-input-3" type="number" placeholder="Answer"> : <input class="form-control" id="pp2-input-4" type="number" placeholder="Answer"> ratio.
+    </div>
+  </div>
+</div>

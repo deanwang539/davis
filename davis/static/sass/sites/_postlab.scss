@@ -1,0 +1,116 @@
+// _postlab.scss
+.postlab-container {
+  @include border-init($color-card-border, 2px);
+  @include border-radius-init(5px, 0, 0, 5px, 5px);
+  min-height: 12em;
+  border-top: 0;
+  font-family: $font-regular;
+}
+
+.postlab-main-title {
+  @include border-init($color-r-border, 5px);
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  padding: 1em;
+}
+
+.postlab-content {
+  padding: 0 2em 5em 2em;
+}
+
+.postlab-card {
+  .postlab-input-content {
+    margin-top: -2em;
+    padding-left: 1.5em;
+    .postlab-input {
+      @extend .pp2-input;
+    }
+  }
+}
+
+.postlab-title {
+  display: inline-block;
+  // margin-top: 3em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 0;
+  font-size: 20px;
+  u {
+    sub {
+      bottom: -0.01em !important;
+    }
+  }
+}
+
+.postlab-title.title-underline {
+  border-bottom: 2px solid $p-color-content;
+  padding: 0;
+}
+
+.postlab-sub-card {
+  padding: 0 1em 0 2.5em !important;
+}
+
+.trial-num {
+  // margin-bottom: 2em !important;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+// .postlab-chkbox-card {
+//   .postlab-title {
+//     margin-bottom: 2em;
+//   }
+//   .postlab-chkbox-content {
+//     padding-left: .5em;
+//   }
+// }
+//
+// .postlab-input-card {
+//   @extend .postlab-chkbox-card;
+//   .postlab-input-content {
+//     padding-left: 1.5em;
+//     .postlab-input {
+//       @extend .pp2-input;
+//     }
+//   }
+// }
+
+.postlab-chkbox {
+  display: inline-block;
+  margin: 2em 2em 0 1.8em;
+  font-size: 16px;
+}
+
+.postlab-chkbox-content {
+  margin-top: -2em;
+  padding-left: .6em;
+}
+
+.postlab-mix-content {
+  margin-top: -1em;
+  padding-left: 1.5em;
+  .postlab-radio {
+    margin-top: 1em;
+    margin-bottom: 3em;
+    .radio {
+      display: inline-block;
+      width: auto;
+    }
+  }
+  .postlab-fill-blank {
+    @extend .pp2-fill-blank;
+  }
+  .postlab-ta {
+    width: 70%;
+    padding: 0 1.5em;
+  }
+}
+
+.postlab-btn-pos {
+  margin-top: 3em;
+  #postlab_save {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,21 @@
+// _spinner_loader.scss
+
+#cover {
+  background: url($spinner-loader) no-repeat scroll center center #FFF;
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  z-index: 9999;
+}
+
+#submit_cover {
+  @extend #cover;
+  display: none;
+  background: url($submit-loader) no-repeat scroll center center rgba(0, 0, 0, 0.3);
+}
+
+#spin_cover {
+  @extend #cover;
+  display: none;
+  background: url($spin-loader) no-repeat scroll center center rgba(0, 0, 0, 0.3);
+}

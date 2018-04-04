@@ -1,0 +1,28 @@
+// _complete.scss
+.complete-card {
+  @extend .pp1-card;
+  font-family: $font-regular;
+}
+
+.complete-title {
+  color: $p-color-text;
+  font-size: 30px;
+}
+
+.complete-des {
+  color: $s-color-text;
+  font-size: 20px;
+}
+
+.complete-img {
+  margin: 3em 0;
+  img {
+    width: 300px;
+  }
+}
+
+.complete-note {
+  color: $color-quote;
+  font-size: 16px;
+  margin: 0 0 1em 0;
+}

@@ -1,0 +1,66 @@
+// _experiment.scss
+
+.custom-container {
+  padding: 2.5em 0.94em;
+}
+
+.custom-row {
+  min-height: 772.688px;
+  padding: 0 1.88em 3.5em;
+  border-radius: 0.31em;
+}
+
+.bg-white {
+  background: white !important;
+}
+
+.col-padding {
+  padding: 1.88em;
+}
+
+.exp-title {
+  font-family: $font-light;
+  font-size: 24px;
+  color: $p-color-text;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.exp-card {
+  background: white;
+  border-radius: 10px;
+  -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+}
+
+.card-name {
+  display: inline-block;
+  color: $s-color-text;
+  font-family: $font-regular;
+  font-size: 18px;
+  margin-top: 1em;
+}
+
+.card-date {
+  @extend .card-name;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.info-check {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.btn-padding {
+  padding: 1.88em 1.88em 0 0;
+}

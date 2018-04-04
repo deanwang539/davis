@@ -1,0 +1,27 @@
+// _introduction.scss
+
+.intro-card {
+  font-family: $font-regular;
+}
+
+.intro-title {
+  color: $p-color-text;
+  padding-left: 8.5em;
+}
+
+.intro-content {
+  @include border-init($color-quote-border, 5px);
+  margin: 2em 10em 2em 8em;
+  padding-left: 2em;
+  color: $p-color-content;
+  font-size: 20px;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 0;
+}
+
+.intro-btn-pos {
+  position: absolute;
+  bottom: 12em;
+}

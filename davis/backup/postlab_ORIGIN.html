@@ -1,0 +1,738 @@
+{% extends "base.html" %}
+{% block title %}Postlab{% endblock %}
+{% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white">
+    <div class="row">
+      <div class="exp-title">
+        <p class="text-uppercase title-underline">POSTLAB</p>
+      </div>
+      <div class='col-sm-12 col-padding'>
+        <div class='postlab-container'>
+          <div class='postlab-main-title border-green'></div>
+          <div class="postlab-content">
+            <!-- card 1 -->
+            <div class="postlab-card">
+              <div class="postlab-title title-underline" style="margin-top: 0 !important;">Convert V<sub>acid</sub> from mL to L</div>
+              <div class="form-group postlab-sub-card formula-card">
+                <div class="formula-title trial-num">Trial 1:</div>
+                <div class="formula-input">
+                  <input class="form-control" type="number" id="det-input-1" placeholder="Answer">
+                </div>
+                <div class="formula-unit">
+                  <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                  <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                </div>
+                <div class="formula-equal text-center">X</div>
+                <!-- fraction -->
+                <table class="formula-divide">
+                  <tr>
+                    <td>
+                      <div class="formula-input">
+                        <input class="form-control" type="number" id="det-input-2" placeholder="Answer">
+                      </div>
+                      <div class="formula-unit">
+                        <select class="custom-select types-select">
+                          <option value='null'>- Unit Type -</option>
+                        </select>
+                        <select class="custom-select units-select select-disabled" disabled>
+                          <option value='null'>- Unit -</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <hr class="divider">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="formula-input">
+                        <input class="form-control" type="number" id="det-input-3" placeholder="Answer">
+                      </div>
+                      <div class="formula-unit">
+                        <select class="custom-select types-select">
+                          <option value='null'>- Unit Type -</option>
+                        </select>
+                        <select class="custom-select units-select select-disabled" disabled>
+                          <option value='null'>- Unit -</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                <!-- end fraction -->
+                <div class="formula-equal text-center">=</div>
+                <div class="formula-input">
+                  <input class="form-control" type="number" id="det-input-4" placeholder="Answer">
+                </div>
+                <div class="formula-unit">
+                  <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                  <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group postlab-sub-card formula-card">
+                <div class="formula-title trial-num">Trial 2:</div>
+                <div class="formula-input">
+                  <input class="form-control" type="number" id="det-input-5" placeholder="Answer">
+                </div>
+                <div class="formula-unit">
+                  <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                  <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                </div>
+                <div class="formula-equal text-center">X</div>
+                <!-- fraction -->
+                <table class="formula-divide">
+                  <tr>
+                    <td>
+                      <div class="formula-input">
+                        <input class="form-control" type="number" id="det-input-6" placeholder="Answer">
+                      </div>
+                      <div class="formula-unit">
+                        <select class="custom-select types-select">
+                          <option value='null'>- Unit Type -</option>
+                        </select>
+                        <select class="custom-select units-select select-disabled" disabled>
+                          <option value='null'>- Unit -</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <hr class="divider">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="formula-input">
+                        <input class="form-control" type="number" id="det-input-7" placeholder="Answer">
+                      </div>
+                      <div class="formula-unit">
+                        <select class="custom-select types-select">
+                          <option value='null'>- Unit Type -</option>
+                        </select>
+                        <select class="custom-select units-select select-disabled" disabled>
+                          <option value='null'>- Unit -</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                <!-- end fraction -->
+                <div class="formula-equal text-center">=</div>
+                <div class="formula-input">
+                  <input class="form-control" type="number" id="det-input-8" placeholder="Answer">
+                </div>
+                <div class="formula-unit">
+                  <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                  <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- card 2 -->
+              <div class="postlab-card">
+                <div class="postlab-title title-underline">Convert V<sub>base</sub> from mL to L</div>
+                <div class="form-group postlab-sub-card formula-card">
+                  <div class="formula-title trial-num">Trial 1:</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-1" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                  <div class="formula-equal text-center">X</div>
+                  <!-- fraction -->
+                  <table class="formula-divide">
+                    <tr>
+                      <td>
+                        <div class="formula-input">
+                          <input class="form-control" type="number" id="det-input-2" placeholder="Answer">
+                        </div>
+                        <div class="formula-unit">
+                          <select class="custom-select types-select">
+                          <option value='null'>- Unit Type -</option>
+                        </select>
+                          <select class="custom-select units-select select-disabled" disabled>
+                          <option value='null'>- Unit -</option>
+                        </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <hr class="divider">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="formula-input">
+                          <input class="form-control" type="number" id="det-input-3" placeholder="Answer">
+                        </div>
+                        <div class="formula-unit">
+                          <select class="custom-select types-select">
+                          <option value='null'>- Unit Type -</option>
+                        </select>
+                          <select class="custom-select units-select select-disabled" disabled>
+                          <option value='null'>- Unit -</option>
+                        </select>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- end fraction -->
+                  <div class="formula-equal text-center">=</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-4" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                </div>
+
+                <div class="form-group postlab-sub-card formula-card">
+                  <div class="formula-title trial-num">Trial 2:</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-5" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                  <div class="formula-equal text-center">X</div>
+                  <!-- fraction -->
+                  <table class="formula-divide">
+                    <tr>
+                      <td>
+                        <div class="formula-input">
+                          <input class="form-control" type="number" id="det-input-6" placeholder="Answer">
+                        </div>
+                        <div class="formula-unit">
+                          <select class="custom-select types-select">
+                          <option value='null'>- Unit Type -</option>
+                        </select>
+                          <select class="custom-select units-select select-disabled" disabled>
+                          <option value='null'>- Unit -</option>
+                        </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <hr class="divider">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="formula-input">
+                          <input class="form-control" type="number" id="det-input-7" placeholder="Answer">
+                        </div>
+                        <div class="formula-unit">
+                          <select class="custom-select types-select">
+                          <option value='null'>- Unit Type -</option>
+                        </select>
+                          <select class="custom-select units-select select-disabled" disabled>
+                          <option value='null'>- Unit -</option>
+                        </select>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- end fraction -->
+                  <div class="formula-equal text-center">=</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-8" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 3 -->
+              <!-- no fraction -->
+              <div class="postlab-card">
+                <div class="postlab-title title-underline">Calculate moles of base used</div>
+                <div class="form-group postlab-sub-card formula-card" style="margin-bottom: 5em;">
+                  <div class="formula-title trial-num">Trial 1:</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-1" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                  <select class="formula-opt postlab-opt">
+                  <option value="+">+</option>
+                  <option value="-">-</option>
+                  <option value="*">*</option>
+                  <option value="/">/</option>
+                </select>
+                  <!-- no fraction -->
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-2" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                  <!-- end no fraction -->
+                  <div class="formula-equal text-center">=</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-3" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                </div>
+
+                <div class="form-group postlab-sub-card formula-card">
+                  <div class="formula-title trial-num">Trial 2:</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-4" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                  <select class="formula-opt postlab-opt">
+                  <option value="+">+</option>
+                  <option value="-">-</option>
+                  <option value="*">*</option>
+                  <option value="/">/</option>
+                </select>
+                  <!-- no fraction -->
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-5" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                  <!-- end no fraction -->
+                  <div class="formula-equal text-center">=</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-6" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 4 -->
+              <div class="postlab-card">
+                <div class="postlab-title title-underline">Calculate moles of acid used</div>
+                <div class="form-group postlab-sub-card formula-card">
+                  <div class="formula-title trial-num">Trial 1:</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-1" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                  <div class="formula-equal text-center">X</div>
+                  <!-- fraction -->
+                  <table class="formula-divide">
+                    <tr>
+                      <td>
+                        <div class="formula-input">
+                          <input class="form-control" type="number" id="det-input-2" placeholder="Answer">
+                        </div>
+                        <div class="formula-unit">
+                          <select class="custom-select types-select">
+                          <option value='null'>- Unit Type -</option>
+                        </select>
+                          <select class="custom-select units-select select-disabled" disabled>
+                          <option value='null'>- Unit -</option>
+                        </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <hr class="divider">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="formula-input">
+                          <input class="form-control" type="number" id="det-input-3" placeholder="Answer">
+                        </div>
+                        <div class="formula-unit">
+                          <select class="custom-select types-select">
+                          <option value='null'>- Unit Type -</option>
+                        </select>
+                          <select class="custom-select units-select select-disabled" disabled>
+                          <option value='null'>- Unit -</option>
+                        </select>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- end fraction -->
+                  <div class="formula-equal text-center">=</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-4" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                </div>
+
+                <div class="form-group postlab-sub-card formula-card">
+                  <div class="formula-title trial-num">Trial 2:</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-1" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                  <div class="formula-equal text-center">X</div>
+                  <!-- fraction -->
+                  <table class="formula-divide">
+                    <tr>
+                      <td>
+                        <div class="formula-input">
+                          <input class="form-control" type="number" id="det-input-2" placeholder="Answer">
+                        </div>
+                        <div class="formula-unit">
+                          <select class="custom-select types-select">
+                          <option value='null'>- Unit Type -</option>
+                        </select>
+                          <select class="custom-select units-select select-disabled" disabled>
+                          <option value='null'>- Unit -</option>
+                        </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <hr class="divider">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="formula-input">
+                          <input class="form-control" type="number" id="det-input-3" placeholder="Answer">
+                        </div>
+                        <div class="formula-unit">
+                          <select class="custom-select types-select">
+                          <option value='null'>- Unit Type -</option>
+                        </select>
+                          <select class="custom-select units-select select-disabled" disabled>
+                          <option value='null'>- Unit -</option>
+                        </select>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- end fraction -->
+                  <div class="formula-equal text-center">=</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-4" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 5 -->
+              <!-- no fraction -->
+              <div class="postlab-card">
+                <div class="postlab-title title-underline">Calculate concentration of acid</div>
+                <div class="form-group postlab-sub-card formula-card" style="margin-bottom: 5em;">
+                  <div class="formula-title trial-num">Trial 1:</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-1" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                  <select class="formula-opt postlab-opt">
+                  <option value="+">+</option>
+                  <option value="-">-</option>
+                  <option value="*">*</option>
+                  <option value="/">/</option>
+                </select>
+                  <!-- no fraction -->
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-2" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                  <!-- end no fraction -->
+                  <div class="formula-equal text-center">=</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-3" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                </div>
+
+                <div class="form-group postlab-sub-card formula-card">
+                  <div class="formula-title trial-num">Trial 2:</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-1" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                  <select class="formula-opt postlab-opt">
+                  <option value="+">+</option>
+                  <option value="-">-</option>
+                  <option value="*">*</option>
+                  <option value="/">/</option>
+                </select>
+                  <!-- no fraction -->
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-2" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                  <!-- end no fraction -->
+                  <div class="formula-equal text-center">=</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-3" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                    <option value='null'>- Unit Type -</option>
+                  </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                    <option value='null'>- Unit -</option>
+                  </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 6 -->
+              <div class="postlab-chkbox-card">
+                <div class="postlab-title title-underline">Determine which trials (at least one) used in further calculations</div>
+                <div class="postlab-chkbox-content">
+                  <div class="postlab-chkbox">
+                    <input id="option" type="checkbox" name="field" value="option">
+                    <label for="option"><span><span></span></span>Trial 1</label>
+                  </div>
+                  <div class="postlab-chkbox">
+                    <input id="option2" type="checkbox" name="field2" value="option">
+                    <label for="option2"><span><span></span></span>Trial 2</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 7 -->
+              <div class="postlab-input-card">
+                <div class="postlab-title title-underline">Calculate average concentration of acid</div>
+                <div class='postlab-input-content'>
+                  <span class='postlab-input'>
+                  <input class="basic-slide" id="postlab-input-1" type="text" placeholder="Type number!" /><label for="postlab-input-1">Answer</label>
+                </span>
+                  <select class="custom-select types-select">
+                  <option value='null'>- Unit Type -</option>
+                </select>
+                  <select class="custom-select units-select select-disabled" disabled>
+                  <option value='null'>- Unit -</option>
+                </select>
+                </div>
+              </div>
+
+              <!-- card 8 -->
+              <div class="postlab-input-card">
+                <div class="postlab-title title-underline">Determine the number of protons involved in the reaction</div>
+                <div class='postlab-input-content'>
+                  <span class='postlab-input'>
+                  <input class="basic-slide" id="postlab-input-2" type="text" placeholder="Type number!" /><label for="postlab-input-2">Answer</label>
+                </span>
+                  <select class="custom-select types-select">
+                  <option value='null'>- Unit Type -</option>
+                </select>
+                  <select class="custom-select units-select select-disabled" disabled>
+                  <option value='null'>- Unit -</option>
+                </select>
+                </div>
+              </div>
+
+              <!-- card 9 -->
+              <div class="postlab-card">
+                <div class="postlab-title title-underline">Do you think your final answer (acid concentration) is realistic? Why or why not?</div>
+                <div class="postlab-mix-content">
+                  <div class='postlab-radio'>
+                    <div class="radio">
+                      <input id="postlab-option-1" name="postlab-option-1" type="radio">
+                      <label for="postlab-option-1" class="radio-label">Yes</label>
+                    </div>
+                    <div class="radio">
+                      <input id="postlab-option-2" name="postlab-option-1" type="radio">
+                      <label for="postlab-option-2" class="radio-label">No</label>
+                    </div>
+                  </div>
+                  <div class="postlab-ta">
+                    <textarea class="form-control" rows="5"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 10 -->
+              <div class="postlab-card">
+                <div class="postlab-title title-underline">Determine the volume and ratio</div>
+                <div class="postlab-mix-content">
+                  <div class="postlab-fill-blank">
+                    Your hypothesized that if the concentration of HCl is greater than the concentration of NaOH, the volume of NaOH required to neutralize the solution of HCl will be
+                    <select class="form-control fb-custom-select">
+                  <option value="1">greater than</option>
+                  <option value="-1">less than</option>
+                  <option value="0">equal to</option>
+                </select> the volume of HCl because the neutralization of HCl with NaOH requires a
+                    <input class="form-control" type="number" placeholder="Answer"> :
+                    <input class="form-control" type="number" placeholder="Answer"> ratio. Was your prediction correct? Why or why not?
+                  </div>
+                  <div class='postlab-radio'>
+                    <div class="radio">
+                      <input id="postlab-option-3" name="postlab-option-2" type="radio">
+                      <label for="postlab-option-3" class="radio-label">Yes</label>
+                    </div>
+                    <div class="radio">
+                      <input id="postlab-option-4" name="postlab-option-2" type="radio">
+                      <label for="postlab-option-4" class="radio-label">No</label>
+                    </div>
+                  </div>
+                  <div class="postlab-ta">
+                    <textarea class="form-control" rows="5"></textarea>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 col-sm-offset-10 btn-padding postlab-btn-pos">
+          <div class="regular-button postlab-btn text-center text-uppercase"><a href="javascript:;">continue</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br> &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

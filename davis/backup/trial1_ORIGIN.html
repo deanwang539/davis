@@ -1,0 +1,182 @@
+{% extends "base.html" %} {% block title %}Trial 1{% endblock %} {% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white">
+    <div class="row">
+      <div class="exp-title">
+        <p class="text-uppercase title-underline">Trial 1</p>
+      </div>
+
+      <form action="" method="post">
+        <div class='col-sm-12 col-padding det'>
+          <div class='det-container'>
+            <div class='det-main-title'>
+            Record the values of V<sub>base</sub> for the indicated points below by recording the location of the meniscus (refer to procedure). V<sub>i</sub> is the initial volume in the burette when the titration is begun for each trial. V<sub>f</sub> is the final volume in the burette when the solution in the Erlenmeyer flask turns a faint pink color.
+            </div>
+            <div class='det-content'>
+              <div class='det-title'>
+                <u>Observations</u>
+              </div>
+              <div class="det-ob">
+                <!-- card 1 -->
+                <div class="form-group det-card">
+                  <label for="det-input-1" class="col-sm-2 col-form-label">Acid Unknown #</label>
+                  <div class="col-sm-2">
+                    <input class="form-control" type="number" id="det-input-1" placeholder="Answer">
+                  </div>
+                  <div class="col-form-unit">
+                    <select class="custom-select types-select">
+                      <option value='null'>- Unit Type -</option>
+                    </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                      <option value='null'>- Unit -</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- card 2 -->
+                <div class="form-group det-card">
+                  <label for="det-input-2" class="col-sm-2 col-form-label">Acid Volume</label>
+                  <div class="col-sm-2">
+                    <input class="form-control" type="number" id="det-input-2" placeholder="Answer">
+                  </div>
+                  <div class="col-form-unit">
+                    <select class="custom-select types-select">
+                      <option value='null'>- Unit Type -</option>
+                    </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                      <option value='null'>- Unit -</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- card 3 -->
+                <div class="form-group det-card">
+                  <label for="det-input-3" class="col-sm-2 col-form-label">Base Concentration</label>
+                  <div class="col-sm-2">
+                    <input class="form-control" type="number" id="det-input-3" placeholder="Answer">
+                  </div>
+                  <div class="col-form-unit">
+                    <select class="custom-select types-select">
+                      <option value='null'>- Unit Type -</option>
+                    </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                      <option value='null'>- Unit -</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- card 4 -->
+                <div class="form-group det-card">
+                  <label for="det-input-4" class="col-sm-2 col-form-label">Base Initial Volume</label>
+                  <div class="col-sm-2">
+                    <input class="form-control" type="number" id="det-input-4" placeholder="Answer">
+                  </div>
+                  <div class="col-form-unit">
+                    <select class="custom-select types-select">
+                      <option value='null'>- Unit Type -</option>
+                    </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                      <option value='null'>- Unit -</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- card 5 -->
+                <div class="form-group det-card">
+                  <label for="det-input-5" class="col-sm-2 col-form-label">Base Final Volume</label>
+                  <div class="col-sm-2">
+                    <input class="form-control" type="number" id="det-input-5" placeholder="Answer">
+                  </div>
+                  <div class="col-form-unit">
+                    <select class="custom-select types-select">
+                      <option value='null'>- Unit Type -</option>
+                    </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                      <option value='null'>- Unit -</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- card 6 -->
+                <div class="form-group det-card">
+                  <label class="col-sm-2 col-form-label">Color After Completion</label>
+                  <div class="det-color-picker col-sm-8">
+                    <img class="det-img" src="{{ url_for('static', filename='images/phenolphthalein_color.jpg') }}" alt="...">
+                    <input class="det-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50" data-slider-tooltip="hide" data-attr="1" />
+                    <div class="det-color-square"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class='det-title' style="margin-top:3em;">
+                <u>Calculations</u>
+              </div>
+              <div class="det-cal">
+                <div class="form-group det-card formula-card">
+                  <div class="formula-title">Base Volume</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-6" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                      <option value='null'>- Unit Type -</option>
+                    </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                      <option value='null'>- Unit -</option>
+                    </select>
+                  </div>
+                  <select class="formula-opt">
+                    <option value="add">+</option>
+                    <option value="minus">-</option>
+                    <option value="multiply">*</option>
+                    <option value="divide">/</option>
+                  </select>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-7" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                      <option value='null'>- Unit Type -</option>
+                    </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                      <option value='null'>- Unit -</option>
+                    </select>
+                  </div>
+                  <div class="formula-equal text-center">=</div>
+                  <div class="formula-input">
+                    <input class="form-control" type="number" id="det-input-8" placeholder="Answer">
+                  </div>
+                  <div class="formula-unit">
+                    <select class="custom-select types-select">
+                      <option value='null'>- Unit Type -</option>
+                    </select>
+                    <select class="custom-select units-select select-disabled" disabled>
+                      <option value='null'>- Unit -</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 col-sm-offset-8 btn-padding det1-btn-pos">
+          <div class="regular-button save-btn text-center text-uppercase"><a href="javascript:;">save</a></div>
+        </div>
+        <div class="col-sm-2 btn-padding det1-btn-pos">
+          <div class="regular-button det1-btn text-center text-uppercase"><a href="javascript:;">continue</a></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br> &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

@@ -1,0 +1,63 @@
+// _pp1.scss
+
+.pp1-card {
+  margin-bottom: 3em;
+  font-family: $font-light;
+  &:nth-child(6n+1) > .pp1-title {
+    background: $color-title;
+    border-color: $color-title;
+  }
+  &:nth-child(6n+2) > .pp1-title {
+    background: $color-b-title;
+    border-color: $color-b-title;
+  }
+  &:nth-child(6n+3) > .pp1-title {
+    background: $color-g-title;
+    border-color: $color-g-title;
+  }
+  &:nth-child(6n+4) > .pp1-title {
+    background: $color-o-title;
+    border-color: $color-o-title;
+  }
+  &:nth-child(6n+5) > .pp1-title {
+    background: $color-p-title;
+    border-color: $color-p-title;
+  }
+}
+
+.pp1-title {
+  @include border-init($color-r-border, 1px);
+  @include border-radius-init(5px, 5px, 5px, 0, 0);
+  background: $color-title;
+  color: white;
+  font-size: 1.3em;
+  padding: 0.8em 2em;
+  padding-left: 3em;
+  text-indent: -1em;
+}
+
+.pp1-content {
+  @include border-init($color-title-border, 1px);
+  @include border-radius-init(5px, 0, 0, 5px, 5px);
+  padding: 0 2em 1em 1em;
+  font-size: 16px;
+  .radio {
+    margin-top: 1em;
+    label {
+      text-indent: -58px;
+      padding-left: 68px;
+    }
+  }
+}
+
+.pp1-btn-pos {
+  padding-top: 0;
+}
+
+.pp1-btn {
+  margin-top: -1em;
+}
+
+#pp1_data {
+  display: none;
+}

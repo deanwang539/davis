@@ -1,0 +1,248 @@
+var experiments = {
+  "exp1": {
+    "introduction": "In the titration lab, you will learn the importance of titrations by titrating an acid with a base. Titrations have many practical uses. In medicine, titrations are used to create exact mixtures of drugs for intravenous drips. Additionally, they are used in pregnancy testing and blood glucose meters. Titrations often have uses in waste removal and biodiesel production by determining the acidity of a variety of solutions.",
+    "safety_overview": {
+      "HCl": {
+        "color": "",
+        "content": "Corrosive, flammable, health hazard (corrosive, skin and eye irritant, dangerous if ingested or inhaled), environmentally toxic."
+      },
+      "NaOH": {
+        "color": "bordergreen",
+        "content": "Corrosive, health hazard (skin and eye irritant, dangerous if ingested or inhaled)."
+      },
+      "Phenolphthalein": {
+        "color": "borderblue",
+        "content": "Health hazard (carcinogen, mutagenic, reproductive toxicity)."
+      }
+    },
+    "purpose": {
+      "background": {
+        "title": {
+          "class": "purpose-heading",
+          "content": "Background"
+        },
+        "class": "purpose-bg",
+        "content": "Determine the concentration of an acidic solution by titration with a base."
+      },
+      "tutorial": {
+        "title": {
+          "class": "purpose-heading",
+          "content": "Tutorial"
+        },
+        "class": "purpose-tutorial",
+        "content": "Below is a video of the titration you will be doing:",
+        "video": {
+          "class": "purpose-video",
+          "src": "https://www.youtube.com/embed/ukSR_2D_7Ug"
+        }
+      },
+      "formula": {
+        "title": {
+          "class": "purpose-heading",
+          "content": "Formula"
+        },
+        "class": "purpose-formula",
+        "content": "By titrating an acidic solution of unknown concentration with a basic solution of known concentration, one will be able to determine the concentration of the acid by neutralization. By determining the moles of base, the moles of acid and the concentration of the acid can be determined. This can be done using the equation below:<br><br><span class='purpose-formula-break'>n = MV</span><br>The concentration(M) of a solution in units mol/L multiplied by the volume(V) of a solution in units of L is equivalent to the moles(n) in solution. To determine the number of atoms or molecules involved, remember that a mole is equal to 6.02x1023."
+      }
+    },
+    "procedure": {
+      "step1": {
+        "title": {
+          "class": "purpose-heading",
+          "content": "Step 1"
+        },
+        "class": "procedure-p",
+        "content": "Add about 50 mL of NaOH to the burette using the funnel. Make sure the stopcock is closed. Record the initial volume in the burette by the location of the meniscus like in the picture below.",
+        "imgs": {
+          "img1": {
+            "class": "procedure-img",
+            "src": "../static/images/meniscus_eye_level.png"
+          }
+        }
+      },
+      "step2": {
+        "title": {
+          "class": "purpose-heading",
+          "content": "Step 2"
+        },
+        "class": "procedure-p",
+        "content": "Measure out 100 mL of HCl in a volumetric flask. Transfer the HCl to an Erlenmeyer flask."
+      },
+      "step3": {
+        "title": {
+          "class": "purpose-heading",
+          "content": "Step 3"
+        },
+        "class": "procedure-p",
+        "content": "Add 2-3 drops of Phenolphthalein to the Erlenmeyer flask."
+      },
+      "step4": {
+        "title": {
+          "class": "purpose-heading",
+          "content": "Step 4"
+        },
+        "class": "procedure-p",
+        "content": "Arrange the burette and Erlenmeyer flask in the set up below.",
+        "imgs": {
+          "img1": {
+            "class": "procedure-img",
+            "src": "../static/images/titration_setup.png"
+          }
+        }
+      },
+      "step5": {
+        "title": {
+          "class": "purpose-heading",
+          "content": "Step 5"
+        },
+        "class": "procedure-p",
+        "content": "Open the stopcock and allow the NaOH to slowly enter the Erlenmeyer flask one drop at a time. Mix the solution between each drop of NaOH."
+      },
+      "step6": {
+        "title": {
+          "class": "purpose-heading",
+          "content": "Step 6"
+        },
+        "class": "procedure-p",
+        "content": "Close the stopcock when the solution in the Erlenmeyer flask turns a faint pink color that does not disappear with mixing. Placing white paper under the Erlenmeyer flask may make the color easier to see. Record the final volume in the burette by the location of the meniscus.",
+        "imgs": {
+          "img1": {
+            "class": "procedure-img-20",
+            "src": "../static/images/titration_before.png"
+          },
+          "img2": {
+            "class": "procedure-img-20",
+            "src": "../static/images/titration_after.png"
+          }
+        }
+      },
+      "step7": {
+        "title": {
+          "class": "purpose-heading",
+          "content": "Step 7"
+        },
+        "class": "procedure-p",
+        "content": "Repeat the titration two more times for a total of three trials recording the initial and final volumes in the burette for each trial."
+      }
+    },
+    "waste_disposal": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt diam sit amet nunc viverra, et tincidunt mi accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non auctor magna. Suspendisse aliquam turpis non mi volutpat pellentesque. Quisque sagittis, lorem ac suscipit tempus, risus nulla lacinia lorem, et dapibus augue tellus vel massa. Mauris eu urna non mi gravida convallis. Nulla volutpat libero nunc, in consequat mi placerat id. Donec in magna ut mi condimentum sollicitudin id non metus. Curabitur faucibus molestie lorem. In eget porttitor risus. Donec laoreet, ante ac interdum placerat, dolor tellus finibus mi, eget malesuada magna tellus sit amet nulla. Fusce auctor, neque faucibus dignissim ullamcorper, est felis ornare risus, non imperdiet neque felis eu nisl. Donec molestie nisi quis massa lobortis euismod. Duis egestas sem ut purus dapibus lacinia. In quis ullamcorper felis, ut accumsan neque.<br><br><span class='content-quote'>-Some famous Source</span>",
+    "prelab": {
+      "pp1": {
+        "questions": {
+          "q1": {
+            "title": {
+              "content": "1. You are working on the titration lab when HCl is splashed on you. Holes begin to appear in your lab coat. What is the first thing you should do?",
+              "style": ""
+            },
+            "A": {
+              "id": "option-1",
+              "content": "A. Dry your shirt off with paper towel.",
+              "group": "selector-1"
+            },
+            "B": {
+              "id": "option-2",
+              "content": "B. Pour NaOH of similar concentration on your shirt to neutralize the acid.",
+              "group": "selector-1"
+            },
+            "C": {
+              "id": "option-3",
+              "content": "C. Use the shower in the lab for about 15 minutes.",
+              "group": "selector-1"
+            },
+            "D": {
+              "id": "option-4",
+              "content": "D. Switch your lab coat to one that does not have chemicals on it.",
+              "group": "selector-1"
+            }
+          },
+          "q2": {
+            "title": {
+              "content": "2. You are working on the titration lab when NaOH gets on your skin. It begins to burn. What is the first thing you should do?",
+              "style": "pp1-title-blue"
+            },
+            "A": {
+              "id": "option-5",
+              "content": "A. Pour HCl on the area to neutralize the base.",
+              "group": "selector-2"
+            },
+            "B": {
+              "id": "option-6",
+              "content": "B. Wash the area thoroughly for about 15 minutes.",
+              "group": "selector-2"
+            },
+            "C": {
+              "id": "option-7",
+              "content": "C. Dry the area off with paper towel.",
+              "group": "selector-2"
+            },
+            "D": {
+              "id": "option-8",
+              "content": "D. Cover the area with a bandage.",
+              "group": "selector-2"
+            }
+          },
+          "q3": {
+            "title": {
+              "content": "3. You have finished the lab and are cleaning up. Where should you dispose of the excess NaOH and neutralized solution?",
+              "style": "pp1-title-green"
+            },
+            "A": {
+              "id": "option-9",
+              "content": "A. Pour both down the drain in the sink.",
+              "group": "selector-3"
+            },
+            "B": {
+              "id": "option-10",
+              "content": "B. Pour the neutralized solution down the drain, but pour the NaOH in the labelled NaOH waste container.",
+              "group": "selector-3"
+            },
+            "C": {
+              "id": "option-11",
+              "content": "C. Pour the neutralized solution in a labelled waste container for HCl, NaOH, and phenolphthalein. Excess NaOH can be poured back into the stock solution bottle.",
+              "group": "selector-3"
+            },
+            "D": {
+              "id": "option-12",
+              "content": "D. Pour both solutions into the labelled waste container for each solution respectively.",
+              "group": "selector-3"
+            }
+          }
+        }
+      },
+      "pp2": {
+        "questions": {
+          "q1": {
+            "title": {
+              "content": "A titration was performed using the procedure above; 100 mL of HCl was titrated with 0.1M NaOH. Based on data recorded below, answer the questions 4 and 5.",
+              "style": "pp1-title-orange"
+            },
+            "content": {
+              "html": "<table class='table'><thead><tr><th>Volume Base</th><th>Volume Acid</th><th>Base Concentration</th></tr></thead><tbody><tr><td>10.2 mL</td><td>99.8 mL</td><td>0.1 M</td></tr></tbody></table>",
+              "style": "pp2-content"
+            }
+          },
+          "q2": {
+            "title": {
+              "content": "4. Determine the average amount of base used for the three trials.",
+              "style": "no-indent pp1-title-purple"
+            },
+            "content": {
+              "html": "<span class='pp2-input'><input class='basic-slide' id='ans-1' type='text' placeholder='Type number!' /><label for='ans-1'>Answer</label></span><select class='custom-select types-select'><option value='null'>- Unit Type -</option></select><select class='custom-select units-select select-disabled' disabled><option value='null'>- Unit -</option></select>",
+              "style": "pp1-content cancel-bottom-padding"
+            }
+          },
+          "q3": {
+            "title": {
+              "content": "5. Determine concentration of the acid.",
+              "style": "pp1-title-green"
+            },
+            "content": {
+              "html": "<span class='pp2-input'><input class='basic-slide' id='ans-2' type='text' placeholder='Type number!' /><label for='ans-2'>Answer</label></span><select class='custom-select types-select'><option value='null'>- Unit Type -</option></select><select class='custom-select units-select select-disabled' disabled><option value='null'>- Unit -</option></select>",
+              "style": "pp1-content cancel-bottom-padding"
+            }
+          }
+        }
+      }
+    }
+  }
+}
