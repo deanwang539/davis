@@ -1,0 +1,32 @@
+{% from 'models/table.html' import table %}
+{% from 'models/input.html' import input %}
+{% from 'models/checkbox.html' import checkbox %}
+{% from 'models/fill_blank.html' import fill_blank %}
+{% from 'models/formula.html' import formula, formula_fraction, formula_line %}
+{% from 'models/tools.html' import color_picker %}
+{% from 'models/mix_content.html' import mix_content %}
+
+{% macro macros(str) -%}
+  {% set name, values = str.split('*') %}
+  {% if name == 'table' %}
+    {{ table(values) }}
+  {% elif name == 'input' %}
+    {{ input(values) }}
+  {% elif name == 'radio' %}
+    {{ radio(values) }}
+  {% elif name == 'checkbox' %}
+    {{ checkbox(values) }}
+  {% elif name == 'fill_blank' %}
+    {{ fill_blank(values) }}
+  {% elif name == 'formula'%}
+    {{ formula(values) }}
+  {% elif name == 'formula_fraction' %}
+    {{ formula_fraction(values) }}
+  {% elif name == 'formula_line' %}
+    {{ formula_line(values) }}
+  {% elif name == 'color_picker'%}
+    {{ color_picker(values) }}
+  {% elif name == 'mix_content'%}
+    {{ mix_content(values) }}
+  {% endif %}
+{%- endmacro %}

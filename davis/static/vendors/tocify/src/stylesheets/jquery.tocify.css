@@ -1,0 +1,116 @@
+/*
+ * jquery.tocify.css 1.9.0
+ * Author: @gregfranko
+ */
+
+
+/* The Table of Contents container element */
+
+.tocify {
+  /*edit*/
+  width: 16em;
+  max-height: 90%;
+  overflow: auto;
+  /*margin-left: 2%;*/
+  /*border: 1px solid #ccc;*/
+  /*webkit-border-radius: 6px;*/
+  /*moz-border-radius: 6px;*/
+  /*font-family: 'Rubik Light', 'Rubik Regular', 'Rubik';*/
+  border-radius: 6px;
+  font-family: 'Segoe UI Light' !important;
+  font-size: 14px;
+}
+
+
+/* The Table of Contents is composed of multiple nested unordered lists.  These styles remove the default styling of an unordered list because it is ugly. */
+
+.tocify ul, .tocify li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: 30px;
+}
+
+
+/* Top level header elements */
+
+.tocify-header {
+  text-indent: 10px;
+}
+
+
+/* Top level subheader elements.  These are the first nested items underneath a header element. */
+
+.tocify-subheader {
+  text-indent: 20px;
+  display: none;
+}
+
+
+/* Makes the font smaller for all subheader elements. */
+
+.tocify-subheader li {
+  font-size: 12px;
+}
+
+
+/* Further indents second level subheader elements. */
+
+.tocify-subheader .tocify-subheader {
+  text-indent: 30px;
+}
+
+
+/* Further indents third level subheader elements. You can continue this pattern if you have more nested elements. */
+
+.tocify-subheader .tocify-subheader .tocify-subheader {
+  text-indent: 40px;
+}
+
+
+/* Twitter Bootstrap Override Style */
+
+.nav-list>li>a, .nav-list .nav-header {
+  margin: 0px;
+}
+
+
+/* Twitter Bootstrap Override Style */
+
+.tocify-header>li>a {
+  padding: 5px !important;
+  border-radius: 5px;
+}
+
+
+/*edit*/
+
+.tocify-item {
+  margin-bottom: 5px !important;
+}
+
+.tocify li:hover {
+  background: #faf9fa;
+  color: #2b2f33;
+  border-radius: 5px;
+}
+
+.tocify-item.active a:hover {
+  background: #E91E63;
+  color: #fff;
+}
+
+.tocify-item.active a {
+  background: #E91E63;
+  color: #fff;
+}
+
+.tocify-stop-scroll {
+  position: fixed;
+  top: 0 !important;
+}
+
+/*.tocify-extend-page {
+  height: 0 !important;
+}*/

@@ -1,0 +1,42 @@
+{% macro input(str) -%}
+  {% set name, qid = str.split(',') %}
+  {% if name == "basic_slide" %}
+    <span class='pp2-input'>
+      <input class="basic-slide" id="{{ qid }}-1" name="{{ qid }}-1" type="number" placeholder="Type number!"/>
+      <label for="{{ qid }}-1">Answer</label>
+    </span>
+    <select class="custom-select types-select" id="{{ qid }}-2" name="{{ qid }}-2">
+      <option value='null'>- Unit Type -</option>
+    </select>
+    <select class="custom-select units-select select-disabled" id="{{ qid }}-3" name="{{ qid }}-3"  disabled>
+      <option value='null'>- Unit -</option>
+    </select>
+  {% elif name == 'pl_basic_slide' %}
+  <div class='postlab-input-content'>
+    <span class='postlab-input'>
+    <input class="basic-slide" id="{{ qid }}-1" name="{{ qid }}-1" type="number" placeholder="Type number!" /><label for="postlab-input-1">Answer</label>
+  </span>
+    <select id="{{ qid }}-2" name="{{ qid }}-2" class="custom-select types-select">
+      <option value='null'>- Unit Type -</option>
+    </select>
+    <select id="{{ qid }}-3" name="{{ qid }}-3" class="custom-select units-select select-disabled" disabled>
+      <option value='null'>- Unit -</option>
+    </select>
+  </div>
+  {% else %}
+    <div class="form-group det-card">
+      <label for="{{ qid }}-1" class="col-sm-2 col-form-label">{{ name }}</label>
+      <div class="col-sm-2">
+        <input class="form-control" type="number" id="{{ qid }}-1" name="{{ qid }}-1" placeholder="Answer">
+      </div>
+      <div class="col-form-unit">
+        <select class="custom-select types-select" id="{{ qid }}-2" name="{{ qid }}-2">
+          <option value='null'>- Unit Type -</option>
+        </select>
+        <select class="custom-select units-select select-disabled" id="{{ qid }}-3" name="{{ qid }}-3" disabled>
+          <option value='null'>- Unit -</option>
+        </select>
+      </div>
+    </div>
+  {% endif %}
+{%- endmacro %}

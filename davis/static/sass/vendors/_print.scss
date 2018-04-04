@@ -1,0 +1,46 @@
+// print.scss
+
+// lab/summary
+@media print {
+  .top_nav, .btn-padding, {
+    display: none !important;
+  }
+  .right_col, .custom-container, .custom-row, footer {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: white !important;
+  }
+  .summary-title {
+    border-color: $color-card-border !important;
+  }
+  // postlab
+  .postlab-sub-card {
+    margin: -2.5em !important
+  }
+  .trial-num {
+    margin-top: 1em;
+  }
+  .form-control, select {
+    text-align: center;
+    border: 0;
+    padding:0;
+    overflow:visible;
+    // remove select arrow
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  .types-select {
+    display: none !important;
+    text-align: center;
+  }
+  .formula-input,
+  .formula-unit,
+  .formula-equal {
+    margin-top: -1em;
+  }
+  .formula-divide {
+    hr {
+      margin-top: 5px !important;
+    }
+  }
+}

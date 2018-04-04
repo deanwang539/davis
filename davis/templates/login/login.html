@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Davis | Login</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <!-- tocify -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/tocify/src/stylesheets/jquery.tocify.css') }}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/bootstrap/dist/css/bootstrap.min.css') }}">
+    <!-- Slider -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/slider/css/slider.css') }}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/font-awesome/css/font-awesome.min.css') }}">
+    <!-- iHover -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/ihover/css/ihover.css') }}">
+    <!-- Accordion -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/jquery-accordion/css/jquery.accordion.css') }}">
+    <!-- My Theme Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.scss.css') }}">
+    <!-- Units data -->
+    <script src="{{ url_for('static', filename='json/units.json') }}"></script>
+  </head>
+  <body class="login-body">
+    <div class="login-container">
+      <div class="login-logo">
+        <img class="img" src="{{ url_for('static', filename='images/Davis_LogoArtboard.png') }}">
+      </div>
+      <div class="login-form">
+        <form class="form-horizontal" id="login-form" action="" method="post">
+          <fieldset>
+            <!-- Form Name -->
+            <legend class="login-title">
+              <center>
+                <h1>LOGIN</h1>
+              </center>
+            </legend>
+            <div class="form-group">
+              <label class="sr-only col-md-4 control-label" for="username">Username</label>
+              <div class="col-md-6 col-md-offset-3">
+                <div class="input-group"> <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                  <input id="username" name="username" type="text" placeholder="USERNAME" class="form-control input-md">
+                </div>
+              </div>
+            </div>
+            <!-- Password input-->
+            <div class="form-group">
+              <label class="sr-only col-md-4 control-label" for="password">Password</label>
+              <div class="col-md-6 col-md-offset-3">
+                <div class="input-group"> <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                  <input id="password" name="password" type="password" placeholder="PASSWORD" class="form-control input-md">
+                </div>
+              </div>
+            </div>
+            <!-- Remember me -->
+            <div class="form-group">
+              <div class="form-check col-md-6 col-md-offset-3">
+                <label class="form-check-label" for="remember">
+                  <input id="remember" name="remember" class="form-check-input" type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remember me
+                </label>
+                <label class="login-forgot">
+                  <a href="">Forgot password?</a>
+                </label>
+              </div>
+            </div>
+            <!-- Button -->
+            <div class="form-group">
+              <label class="sr-only col-md-4 control-label" for="btnSubmit">Submit</label>
+              <div class="login-btn">
+                <button id="btnSubmit" class="col-md-6 col-md-offset-3 btn btn-success" type="submit">LOGIN</button>
+              </div>
+            </div>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                  <p class="text-center flash-msg">{{ message }}</p>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+            <!-- Divider -->
+            <div class="login-divider">
+              <img class="divider-left" src="{{ url_for('static', filename='images/divider.png') }}" alt="divider-left">
+              <span class="divider-text">OR</span>
+              <img class="divider-right" src="{{ url_for('static', filename='images/divider.png') }}" alt="divider-right">
+            </div>
+          </fieldset>
+        </form>
+        <div class="login-alt-options form-horizontal">
+          <div class="login-signup form-group">
+            <p>Don't have an account? <span class="text-primary"><a href="">Sign Up!</a></span></p>
+          </div>
+          <div class="login-btn form-group">
+            <img src="{{ url_for('static', filename='images/facebook.png') }}" alt="facebook">
+            <button class="col-md-6 col-md-offset-3 btn btn-primary">LOGIN WITH FACEBOOK</button>
+          </div>
+          <div class="login-btn form-group">
+            <img src="{{ url_for('static', filename='images/google.png') }}" alt="google">
+            <button class="col-md-6 col-md-offset-3 btn btn-danger">LOGIN WITH GOOGLE</button>
+          </div>
+        </div>
+      </div>
+      <div class="login-footer">
+        <p>Server Version:&nbsp;Davis_0.4_20170524.8f1e8a3</p>
+      </div>
+      <div id="cover"></div>
+      <div id="submit_cover"></div>
+      <div id="spin_cover"></div>
+    </div>
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='vendors/jquery/dist/jquery.min.js') }}"></script>
+    <!-- Bootstrap -->
+    <script src="{{ url_for('static', filename='vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <!-- jQuery Validation -->
+    <script src="{{ url_for('static', filename='vendors/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+    <!-- scrollLock -->
+    <script src="{{ url_for('static', filename='vendors/scrollLock/src/js/jquery.scrollLock.js') }}"></script>
+    <!-- Main Scripts -->
+    <script src="../static/js/login.js"></script>
+    <!-- loading effect -->
+    <script>
+      $(window).load(function(){
+        // lock when spining
+        $.scrollLock();
+        $('#submit_cover').hide();
+        $('#spin_cover').hide();
+        $('#cover').fadeOut(1500, function() {
+          $.scrollLock();
+        });
+      });
+    </script>
+  </body>
+</html>

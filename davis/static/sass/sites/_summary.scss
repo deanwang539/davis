@@ -1,0 +1,50 @@
+// _summary.scss
+
+.summary-card {
+  @extend .so-card;
+  border: none;
+}
+
+.summary-title {
+  @extend .so-title;
+  @include border-init($color-b-title, 2px);
+  @include border-radius-init(3px, 3px, 3px, 0, 0);
+  background: $color-b-title;
+  color: white;
+  text-decoration: none;
+}
+
+.summary-content {
+  @include border-init($color-card-border, 2px);
+  @include border-radius-init(3px, 0, 0, 3px, 3px);
+  border-top: 0;
+  padding: 2em;
+  font-size: 18px;
+}
+
+.summary-content {
+  .summary-des {
+    margin-bottom: 1.5em;
+    font-size: 20px;
+  }
+  table {
+    td,
+    th {
+      text-align: center;
+      vertical-align: middle !important;
+    }
+  }
+}
+
+.summary-color-square {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #ff01ff !important;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.summary-btn-pos {
+  margin-top: 0;
+}

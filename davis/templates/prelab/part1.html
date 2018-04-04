@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Prelab Part-1{% endblock %}
+{% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white">
+    <div class="row">
+      <div class="exp-title">
+        <p class="text-uppercase title-underline">PRELAB - 1/2</p>
+      </div>
+
+      <!-- form start -->
+      <form id="prelab_part1_form" action="" method="post">
+        <div class='col-sm-12 col-padding pp1'>
+
+          {% for i, q in questions.iteritems()|sort %}
+            <!-- i-th question -->
+            <div class='pp1-card'>
+              <div class='pp1-title'>
+                <p>{{ i }}. {{ q.text }}</p>
+              </div>
+              <div class='pp1-content'>
+                {% set abcd = ['A', 'B', 'C', 'D'] %}
+                {% for j, ans in q.ans.iteritems()|sort %}
+                  <div class="radio">
+                    <input id="{{ i }}-{{ j }}" value="{{ j }}" name="{{ i }}" type="radio">
+                    <label for="{{ i }}-{{ j }}" class="radio-label">{{abcd[loop.index-1]}}. {{ ans }}</label>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+            <!-- end i-th question -->
+          {% endfor %}
+
+          <!-- server data -->
+          <div id="pp1_data" data-checked="{{ checked }}"></div>
+        </div>
+        <div class="col-sm-2 col-sm-offset-8 btn-padding pp1-btn-pos">
+          <div id="prelab_part1_save" class="regular-button save-btn text-center text-uppercase"><a href="javascript:;">save</a></div>
+        </div>
+        <div class="col-sm-2 btn-padding pp1-btn-pos">
+          <div class="regular-button pp1-btn text-center text-uppercase"><a href="javascript:;">continue</a></div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br>
+    &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

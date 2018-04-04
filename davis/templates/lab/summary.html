@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% from 'models/macros.html' import macros %}
+{% block title %}Summary{% endblock %}
+{% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white">
+    <div class="row">
+      <div class="exp-title">
+        <p class="text-uppercase title-underline">SUMMARY</p>
+      </div>
+      <div class='col-sm-12 col-padding'>
+        <div class='summary-card'>
+          <div class='summary-title text-uppercase text-center'>{{ questions.title }}</div>
+          <div class="summary-content">
+            <div class="summary-des text-center">
+              <p>{{ first_name }} {{ last_name }}</p>
+              <p>{{ course_id }} {{ section_id }} {{ semester }}</p>
+              <p>Expire on 9/1/2017</p>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  {% for i, head in questions.theads.iteritems()|sort %}
+                    <th>{{ head }}</th>
+                  {% endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {% for i, t in trials.iteritems()|sort %}
+                  <tr>
+                    {% for j, k in t.iteritems()|sort %}
+                      {% if loop.first %}
+                      <th scope="row">{{ k|safe }}</th>
+                      {% else %}
+                      <td>{{ k|safe }}</td>
+                      {% endif %}
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-sm-offset-8 btn-padding summary-btn-pos">
+        <div id='summary_print' class="regular-button print-btn text-center text-uppercase"><a href="javascript:;">print</a></div>
+      </div>
+      <div class="col-sm-2 btn-padding summary-btn-pos">
+        <div class="regular-button summary-btn text-center text-uppercase"><a href="javascript:;">continue</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br> &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

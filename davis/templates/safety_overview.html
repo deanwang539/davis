@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Safety Overview{% endblock %}
+{% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white">
+    <div class="row">
+      <div class="exp-title">
+        <p class="text-uppercase title-underline">SAFETY OVERVIEW</p>
+      </div>
+
+      <!-- card 1 -->
+      <div class='col-sm-9 col-padding'>
+        <div class='so-card'>
+          <div class='so-title'>
+            <span>Hydrochloric Acid (HCl)</span>
+          </div>
+          <div class='so-content'>
+          Corrosive, flammable, health hazard (corrosive, skin and eye irritant, dangerous if ingested or inhaled), environmentally toxic.
+          </div>
+        </div>
+      </div>
+
+      <!-- card 2 -->
+      <div class='col-sm-9 col-padding'>
+        <div class='so-card'>
+          <div class='so-title border-blue'>
+            <span>Sodium Hydroxide (NaOH)</span>
+          </div>
+          <div class='so-content'>
+          Corrosive, health hazard (skin and eye irritant, dangerous if ingested or inhaled).
+          </div>
+        </div>
+      </div>
+
+      <!-- card 3 -->
+      <div class='col-sm-9 col-padding'>
+        <div class='so-card'>
+          <div class='so-title border-green'>
+            <span>Phenolphthalein</span>
+          </div>
+          <div class='so-content'>
+          Health hazard (carcinogen, mutagenic, reproductive toxicity).
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-2 col-sm-offset-10 btn-padding">
+        <div class="regular-button so-btn text-center text-uppercase"><a href="javascript:;">continue</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br>
+    &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Purpose{% endblock %}
+{% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white">
+    <div class="row">
+      <div class="exp-title">
+        <p class="text-uppercase title-underline">PURPOSE</p>
+      </div>
+
+      <!-- po-content fill-->
+      <div class="col-sm-12 purpose-card">
+        <div class="col-sm-3">
+          <div class="purpose-title"></div>
+        </div>
+        <div class="col-sm-9 purpose-content">
+          <h1 class="purpose-heading">Background</h1>
+          <p class="purpose-bg">Determine the concentration of an acidic solution by titration with a base.</p>
+          <h1 class="purpose-heading">Tutorial</h1>
+          <p class="purpose-tutorial">Below is a video of the titration you will be doing:</p>
+          <iframe class="purpose-video" width="560" height="315" src="https://www.youtube.com/embed/ukSR_2D_7Ug" frameborder="0" allowfullscreen></iframe>
+          <h1 class="purpose-heading">Formula</h1>
+          <p class="purpose-formula">
+            By titrating an acidic solution of unknown concentration with a basic solution of known concentration, one will be able to determine the concentration of the acid by neutralization. By determining the moles of base, the moles of acid and the concentration of the acid can be determined. This can be done using the equation below:<br><br><span class="purpose-formula-break">n = MV</span><br>The concentration(M) of a solution in units mol/L multiplied by the volume(V) of a solution in units of L is equivalent to the moles(n) in solution. To determine the number of atoms or molecules involved, remember that a mole is equal to 6.02x10<sup>23</sup>.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-sm-2 col-sm-offset-10 btn-padding">
+        <div class="regular-button po-btn text-center text-uppercase"><a href="javascript:;">continue</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br>
+    &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

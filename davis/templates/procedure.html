@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Procedure{% endblock %}
+{% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white">
+    <div class="row">
+      <div class="exp-title">
+        <p class="text-uppercase title-underline">PROCEDURE</p>
+      </div>
+
+      <div class="col-sm-12 procedure-card">
+        <div class="col-sm-3">
+          <div class="procedure-title"></div>
+        </div>
+        <div class="col-sm-9 procedure-content">
+          <h1 class="purpose-heading">Step 1</h1>
+          <p class="procedure-p">Add about 50 mL of NaOH to the burette using the funnel. Make sure the stopcock is closed. Record the initial volume in the burette by the location of the meniscus like in the picture below.</p>
+          <img class="procedure-img" src="../static/images/meniscus_eye_level.png" alt="...">
+          <h1 class="purpose-heading">Step 2</h1>
+          <p class="procedure-p">Measure out 100 mL of HCl in a volumetric flask. Transfer the HCl to an Erlenmeyer flask.</p>
+          <h1 class="purpose-heading">Step 3</h1>
+          <p class="procedure-p">Add 2-3 drops of Phenolphthalein to the Erlenmeyer flask.</p>
+          <h1 class="purpose-heading">Step 4</h1>
+          <p class="procedure-p">Arrange the burette and Erlenmeyer flask in the set up below.</p>
+          <img class="procedure-img" src="../static/images/titration_setup.png" alt="...">
+          <h1 class="purpose-heading">Step 5</h1>
+          <p class="procedure-p">Open the stopcock and allow the NaOH to slowly enter the Erlenmeyer flask one drop at a time. Mix the solution between each drop of NaOH.</p>
+          <h1 class="purpose-heading">Step 6</h1>
+          <p class="procedure-p">Close the stopcock when the solution in the Erlenmeyer flask turns a faint pink color that does not disappear with mixing. Placing white paper under the Erlenmeyer flask may make the color easier to see. Record the final volume in the burette by the location of the meniscus.</p>
+          <img class="procedure-img-20" src="../static/images/titration_before.png" alt="...">
+          <img class="procedure-img-20" src="../static/images/titration_after.png" alt="...">
+          <h1 class="purpose-heading">Step 7</h1>
+          <p class="procedure-p">Repeat the titration two more times for a total of three trials recording the initial and final volumes in the burette for each trial.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-2 col-sm-offset-10 btn-padding">
+        <div class="regular-button pc-btn text-center text-uppercase"><a href="javascript:;">continue</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br>
+    &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

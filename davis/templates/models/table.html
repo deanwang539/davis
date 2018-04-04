@@ -1,0 +1,21 @@
+<!-- basic table -->
+{% macro table(str) -%}
+  {% set thead, tbody, qid = str.split(';') %}
+  {% set thead, tbody, qid = thead.split(','), tbody.split(','), qid.split(',') %}
+  <table class="table">
+    <thead>
+      <tr>
+        {% for head in thead %}
+        <th>{{ head }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for body in tbody %}
+          <td>{{ body }}</td>
+        {% endfor %}
+      </tr>
+    </tbody>
+  </table>
+{%- endmacro %}

@@ -1,0 +1,12 @@
+<!-- tools -->
+{% macro color_picker(str) -%}
+{% set name, qid = str.split(',') %}
+  <div class="form-group det-card">
+    <label class="col-sm-2 col-form-label">{{ name }}</label>
+    <div class="det-color-picker col-sm-8">
+      <img class="det-img" src="{{ url_for('static', filename='images/phenolphthalein_color.jpg') }}" alt="...">
+      <input id="{{ qid }}-1" name="{{ qid }}-1" class="det-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50" data-slider-tooltip="hide" data-attr="1" />
+      <div class="det-color-square"></div>
+    </div>
+  </div>
+{%- endmacro %}

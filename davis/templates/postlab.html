@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% from 'models/macros.html' import macros %}
+{% block title %}Postlab{% endblock %}
+{% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white">
+    <form id="postlab_form" action="" method="post" autocomplete="off">
+      <div class="row">
+        <div class="exp-title">
+          <p class="text-uppercase title-underline">POSTLAB</p>
+        </div>
+        <div class='col-sm-12 col-padding'>
+          <div class='postlab-container'>
+            <div class='postlab-main-title border-green'></div>
+            <div class="postlab-content">
+              {% for i, card in questions.iteritems()|sort  %}
+                <!-- ith card -->
+                <div class="postlab-card">
+                  {% if loop.first %}
+                  <div class="postlab-title title-underline" style="margin-top: 0 !important;">{{ card.title|safe }}</div>
+                  {% else %}
+                  <div class="postlab-title title-underline">{{ card.title|safe }}</div>
+                  {% endif %}
+                  {{ macros(card.type) }}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-sm-2 col-sm-offset-6 btn-padding postlab-btn-pos">
+            <div id="postlab_save" class="regular-button save-btn text-center text-uppercase"><a href="javascript:;">save</a></div>
+          </div>
+          <div class="col-sm-2 btn-padding postlab-btn-pos">
+            <div id="postlab_print" class="regular-button text-center text-uppercase"><a href="javascript:;">print</a></div>
+          </div>
+          <div class="col-sm-2 btn-padding postlab-btn-pos">
+            <div class="regular-button postlab-btn text-center text-uppercase"><a href="javascript:;">finish</a></div>
+          </div>
+          <!-- server data -->
+          <div id="postlab_data" data-checked="{{ checked }}" data-count="{{ count }}"></div>
+        </div>
+      </div>
+  </form>
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br> &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

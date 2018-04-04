@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% from 'models/macros.html' import macros %}
+{% block title %}Prelab Part-2{% endblock %}
+{% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white">
+    <div class="row">
+      <div class="exp-title">
+        <p class="text-uppercase title-underline">PRELAB - 2/2</p>
+      </div>
+
+      <!-- form start -->
+      <form id="prelab_part2_form" action="" method="post" autocomplete="off">
+        <div class='col-sm-12 col-padding pp2'>
+
+          {% for index, question in questions.iteritems()|sort  %}
+            <div class='pp2-card'>
+              {% if loop.first %}
+                <div class='pp2-title'>{{ question.title }}</div>
+              {% else %}
+                <div class='pp2-title'>{{ index }}. {{ question.title }}</div>
+              {% endif %}
+                <div class='pp2-content'>
+                  {{ macros(question.type) }}
+                </div>
+            </div>
+          {% endfor %}
+
+          <!-- server data -->
+          <div id="pp2_data" data-checked="{{ checked }}"></div>
+        </div>
+        <div class="col-sm-2 col-sm-offset-8 btn-padding pp2-btn-pos">
+          <div id="prelab_part2_save" class="regular-button save-btn text-center text-uppercase"><a href="javascript:;">save</a></div>
+        </div>
+        <div class="col-sm-2 btn-padding pp2-btn-pos">
+          <div class="regular-button pp2-btn text-center text-uppercase"><a href="javascript:;">continue</a></div>
+        </div>
+      </form>
+
+    </div>
+    <!-- end row -->
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br> &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

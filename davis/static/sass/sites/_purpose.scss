@@ -1,0 +1,39 @@
+// _purpose.scss
+.purpose-content {
+  font-family: $font-regular;
+  h1 {
+    margin: 0 0 .5em 0;
+  }
+}
+
+.purpose-heading {
+  color: #333333 !important;
+  font-family: $font-regular !important;
+  font-size: 2.3em !important;
+}
+
+.purpose-bg {
+  color: $p-color-content;
+  font-family: $font-light;
+  font-size: 1.5em;
+  margin: 0 0 3em 0;
+}
+
+.purpose-tutorial {
+  @extend .purpose-bg;
+  margin: 0 0 1.3em 0;
+}
+
+.purpose-video {
+  @extend .purpose-bg;
+  @include border-radius-init(5px, 5px, 5px, 5px, 5px);
+}
+
+.purpose-formula {
+  @extend .purpose-bg;
+}
+
+.purpose-formula-break {
+  display: block;
+  text-align: center;
+}

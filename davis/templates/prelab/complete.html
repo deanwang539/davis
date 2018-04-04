@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% block title %}Prelab Complete{% endblock %} {% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white">
+    <div class="row">
+      <div class="exp-title">
+        <p class="text-uppercase title-underline">PRELAB COMPLETE</p>
+      </div>
+
+      <div class='col-sm-12 col-padding'>
+        <div class="complete-card">
+          <div class="complete-title text-center">
+            <p class="text-uppercase">Titration Prelab Complete!</p>
+          </div>
+          <div class="complete-des text-center">
+            <p>{{ first_name }} {{ last_name }}</p>
+            <p>{{ course_id }} {{ section_id }} {{ semester }}</p>
+            <p>Expire on 9/1/2017</p>
+          </div>
+          <div class="complete-img text-center">
+            <img src="{{ url_for('static', filename='images/qrcodes/') }}{{ qr_name }}" alt="...">
+          </div>
+          <div class="complete-note text-center">
+            <p>* Bring printed or electronic copy to the lab.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-2 col-sm-offset-4">
+        <div class="regular-button print-btn text-center text-uppercase"><a href="javascript:;">print</a></div>
+      </div>
+      <div class="col-sm-2">
+        <div class="regular-button send-btn text-center text-uppercase"><a href="javascript:;">send to phone</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br> &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

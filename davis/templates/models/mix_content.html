@@ -1,0 +1,44 @@
+{% macro mix_content(str) -%}
+{% set name, qid = str.split(',') %}
+{% set qid = qid|int %}
+  {% if name == 'mix_radio' %}
+  <div class="postlab-mix-content">
+    <div class='postlab-radio'>
+      <div class="radio">
+        <input id="{{ qid }}-1" name="{{ qid }}-1" type="radio">
+        <label for="{{ qid }}-1" class="radio-label">Yes</label>
+      </div>
+      <div class="radio">
+        <input id="{{ qid+1 }}-1" name="{{ qid }}-1" type="radio">
+        <label for="{{ qid+1 }}-1" class="radio-label">No</label>
+      </div>
+    </div>
+    <div class="postlab-ta">
+      <textarea id="{{ qid+2 }}-1" name="{{ qid+2 }}-1"  class="form-control" placeholder="Type your answer here..." rows="5"></textarea>
+    </div>
+  </div>
+  {% elif name == 'mix_blank' %}
+  <div class="postlab-mix-content">
+    <div class="postlab-fill-blank">
+      Your hypothesized that if the concentration of HCl is greater than the concentration of NaOH, the volume of NaOH required to neutralize the solution of HCl will be
+      <span class="text-uppercase blk-underline"></span>
+      the volume of HCl because the neutralization of HCl with NaOH requires a
+      <span class="text-uppercase blk-underline"></span> : <span class="text-uppercase blk-underline"></span>
+      ratio. Was your prediction correct? Why or why not?
+    </div>
+    <div class='postlab-radio'>
+      <div class="radio">
+        <input id="{{ qid+1 }}-1" name="{{ qid+1 }}-1" type="radio">
+        <label for="{{ qid+1 }}-1" class="radio-label">Yes</label>
+      </div>
+      <div class="radio">
+        <input id="{{ qid+2 }}-1" name="{{ qid+1 }}-1" type="radio">
+        <label for="{{ qid+2 }}-1" class="radio-label">No</label>
+      </div>
+    </div>
+    <div class="postlab-ta">
+      <textarea id="{{ qid+3 }}-1" name="{{ qid+3 }}-1" class="form-control" placeholder="Type your answer here..." rows="5"></textarea>
+    </div>
+  </div>
+  {% endif %}
+{%- endmacro %}

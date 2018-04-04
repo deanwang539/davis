@@ -1,0 +1,66 @@
+// _trial1.scss
+.det-container {
+  font-family: $font-light;
+}
+
+.det-card {
+  margin-bottom: 3em;
+}
+
+.det-main-title {
+  @include border-init($color-r-border, 1px);
+  @include border-radius-init(5px, 5px, 5px, 0, 0);
+  color: white;
+  background: $color-title;
+  font-size: 1.3em;
+  padding: 0.8em 2em;
+}
+
+.det-content {
+  @include border-init($color-title-border, 1px);
+  @include border-radius-init(5px, 0, 0, 5px, 5px);
+  padding: 2em 2em 0 2em;
+  font-size: 14px;
+  .form-control {
+    @include border-init($color-input-border, 1px);
+    width: 108px;
+    height: 40.5px;
+    border-radius: 3px;
+  }
+
+  .det-title {
+    font-size: 20px;
+    &:nth-of-type(n+2) {
+      margin-top: 3em;
+    }
+  }
+}
+
+.det-ob,
+.det-cal {
+  padding: 30px 0;
+}
+
+.col-form-label {
+  margin: 0;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: 300 !important;
+}
+
+.col-form-unit {
+  display: inline-block;
+  margin-left: -3.2em;
+}
+
+.det1-btn-pos {
+  margin-top: 1em;
+}
+
+.det1-btn {
+  margin-top: -1em;
+}
+
+.det-color-square-left {
+  left: 10px !important;
+}

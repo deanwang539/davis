@@ -1,0 +1,19 @@
+<!-- fill blank -->
+{% macro fill_blank(str) -%}
+  {% set exp_name, qid = str.split(',') %}
+  {% if exp_name == 'titration' %}
+    <div class="pp2-fill-blank">
+      If the concentration of HCl is greater than the concentration of NaOH, the volume of NaOH required to neutralize the solution of HCl will be
+      <select id="{{ qid }}-1" name="{{ qid }}-1" class="form-control fb-custom-select">
+        <option value="greater than">greater than</option>
+        <option value="less than">less than</option>
+        <option value="equal to">equal to</option>
+      </select>
+      the volume of HCl because the neutralization of HCl with NaOH requires a
+      <input class="form-control" id="{{ qid }}-2" name="{{ qid }}-2" type="number" placeholder="Answer">
+      :
+      <input class="form-control" id="{{ qid }}-3" name="{{ qid }}-3" type="number" placeholder="Answer">
+      ratio.
+    </div>
+  {% endif %}
+{%- endmacro %}

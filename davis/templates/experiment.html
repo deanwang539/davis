@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Experiment{% endblock %}
+{% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white">
+    <div class="row">
+      <div class="exp-title">
+        <p class="text-uppercase title-underline">select an experiment</p>
+      </div>
+
+      {% for index, exp in experiments.iteritems() %}
+        <!-- i-th experiment -->
+        <div class="col-sm-4 col-padding">
+          <div class="exp-card">
+            <figure class="figure">
+              <!-- ihover -->
+              <div class="ih-item square effect13 {{ exp['color'] }} {{ exp['effect'] }}">
+                <a href="javascript:;">
+                  <div class="img"><img name="{{ exp['name'] }}" src="{{ url_for('static', filename=exp['pic']) }}" alt="img"></div>
+                  <div class="info">
+                    <div class="info-content">
+                      <h3>Heading here</h3>
+                      <p>Description goes here</p>
+                    </div>
+                    <div class="info-check">
+                      <img src="{{ url_for('static', filename='images/check.png') }}" alt="img">
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <figcaption class="figure-caption text-center">
+                <span class="text-uppercase card-name">experiment {{ exp['no'] }}</span>
+                <br>
+                <span class="card-date">July 17th, 2017</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <!-- end i-th experiment -->
+      {% endfor %}
+
+      <div class="col-sm-2 col-sm-push-10 btn-padding">
+        <div class="regular-button exp-btn text-center text-uppercase"><a href="javascript:;">continue</a></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br>
+    &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

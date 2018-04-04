@@ -1,0 +1,27 @@
+// _safety_overview.scss
+
+.so-card {
+  @include border-init($color-card-border, 2px);
+  @include border-radius-init(5px, 0, 0, 5px, 5px);
+  min-height: 12em;
+  border-top: 0;
+  font-family: $font-regular;
+}
+
+.so-title {
+  @include border-init($color-r-border, 5px);
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  padding: 1em;
+  font-size: 24px;
+  color: $p-color-text;
+  text-decoration: underline;
+}
+
+.so-content {
+  margin-top: 1em;
+  padding: 1.5em;
+  font-size: 18px;
+  color: $p-color-content;
+}

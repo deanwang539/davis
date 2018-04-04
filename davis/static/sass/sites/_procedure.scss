@@ -1,0 +1,28 @@
+// _procedure.scss
+
+.procedure-content {
+  font-family: $font-regular;
+}
+
+.procedure-content {
+  h1 {
+    margin: 0 0 0.5em;
+  }
+}
+
+.procedure-p {
+  margin: 0 0 4em;
+  color: $p-color-content;
+  font-family: $font-light;
+  font-size: 1.5em;
+}
+
+.procedure-img {
+  width: 30%;
+  margin: -4em 0 4em;
+}
+
+.procedure-img-20 {
+  width: 20%;
+  margin: -4em 0 4em;
+}

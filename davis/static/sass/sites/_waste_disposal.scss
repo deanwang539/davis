@@ -1,0 +1,12 @@
+// _waste_disposal.scss
+.wd-card {
+  @extend .so-card;
+}
+
+.wd-title {
+  @extend .so-title;
+}
+
+.wd-content {
+  @extend .so-content;
+}

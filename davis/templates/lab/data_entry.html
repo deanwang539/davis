@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% from 'models/macros.html' import macros %}
+{% block title %}Data Entry{% endblock %}
+{% block content %}
+<div class="container custom-container">
+  <div class="custom-row bg-white" style="min-height: 1041px;">
+
+    <form id="det2_form" action="" method="post" class="trial-accordion" autocomplete="off" data-accordion-group>
+      <div class="row open" data-accordion>
+        <div class="exp-title adjust-arrow" data-control>
+          <p class="text-uppercase title-underline">Trial 1</p>
+        </div>
+        <div data-content>
+          <div class='col-sm-12 col-padding det'>
+            <div class='det-container'>
+              <div class='det-main-title title-blue'>{{ questions.title | safe }}</div>
+              <div class='det-content'>
+              {% for i, card in questions.cards.iteritems() | sort %}
+                <div class='det-title'><u>{{ card.title }}</u></div>
+                <div class="det-ob">
+                  {% for j, type in card.ans.iteritems() | sort %}
+                    {{ macros(type) }}
+                  {% endfor %}
+                </div>
+              {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-sm-offset-6 btn-padding save-btn">
+        <div id="det2_save" class="regular-button text-center text-uppercase"><a href="javascript:;">save</a></div>
+      </div>
+      <div class="col-sm-2 btn-padding">
+        <div class="regular-button new-trial-btn text-center text-uppercase"><a href="javascript:;">new trial</a></div>
+      </div>
+      <div class="col-sm-2 btn-padding cancel-top-padding">
+        <div class="regular-button det2-btn text-center text-uppercase"><a href="javascript:;">continue</a></div>
+      </div>
+      <!-- server data -->
+      <div id="det2_data" data-checked="{{ checked }}" data-count="{{ count }}"></div>
+    </form>
+  </div>
+</div>
+
+<!-- footer content -->
+<footer>
+  <div class="text-center">
+    Server Version: Davis_0.1
+    <br> &copy; 2017 - SVN Inc.
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+{% endblock %}

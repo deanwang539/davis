@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Davis | {% block title %}{% endblock %}</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <!-- tocify -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/tocify/src/stylesheets/jquery.tocify.css') }}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/bootstrap/dist/css/bootstrap.min.css') }}">
+    <!-- Slider -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/slider/css/slider.css') }}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/font-awesome/css/font-awesome.min.css') }}">
+    <!-- iHover -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/ihover/css/ihover.css') }}">
+    <!-- Accordion -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/jquery-accordion/css/jquery.accordion.css') }}">
+
+    <!-- Custom Theme Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <!-- My Theme Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.scss.css') }}">
+    <!-- Experiments data -->
+    <!-- <script src="{{ url_for('static', filename='json/experiments.json') }}"></script> -->
+    <!-- Units data -->
+    <script src="{{ url_for('static', filename='json/units.json') }}"></script>
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title">
+                <img src="{{ url_for('static', filename='images/Davis_LogoArtboard.png') }}" alt="..." class="logo_img">
+                <span>Science Lab</span>
+              </a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="{{ url_for('static', filename='images/user_side.png') }}" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>John Doe</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>GENERAL</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i>Home</a></li>
+                  <li><a><i class="fa fa-shield"></i>Lab Safety</a></li>
+                  <li><a><i class="fa fa-briefcase"></i>Lab Equipment</a></li>
+                  <li><a><i class="fa fa-table"></i>Periodic Table</a></li>
+                </ul>
+              </div>
+              <div class="menu_section">
+                <h3>EXPERIMENTS</h3>
+                <ul class="nav side-menu">
+                  <li><a href="experiment"><i class="fa fa-flask"></i>Select Experiment</a></li>
+                  <li><a href="introduction"><i class="fa fa-book"></i>Introduction<span class="lock fa fa-lock"></span></a></li>
+                  <li><a href="safety_overview"><i class="fa fa-exclamation-triangle"></i>Safety Overview<span class="lock fa fa-lock"></span></a></li>
+                  <li><a href="purpose"><i class="fa fa-bullseye"></i>Purpose<span class="lock fa fa-lock"></span></a></li>
+                  <li><a href="procedure"><i class="fa fa-list-ol"></i>Procedure<span class="lock fa fa-lock"></span></a></li>
+                  <li><a href="waste_disposal"><i class="fa fa-bitbucket"></i>Waste Disposal<span class="lock fa fa-lock"></span></a></li>
+                  <li><a><i class="fa fa-commenting"></i>Prelab<span class="fa fa-chevron-down"></span><span class="lock fa fa-lock"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="part1">Part 1</a></li>
+                      <li><a href="part2">Part 2</a></li>
+                      <li><a href="complete">Complete</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-keyboard-o"></i>Lab<span class="fa fa-chevron-down"></span><span class="lock fa fa-lock"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="data_entry">Data Entry</a><li>
+                        <li><a href="summary">Summary</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="postlab"><i class="fa fa-calculator"></i>Postlab<span class="lock fa fa-lock"></span></a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- /sidebar menu -->
+
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav class="" role="navigation">
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="../static/images/user_nav.png" alt="">John Doe
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <!-- click tooltip -->
+                  <div class="tooltip-container dropdown-menu">
+                    <div class="tooltip-bg">
+                      <img src="{{ url_for('static', filename='images/container.png') }}">
+                    </div>
+                    <div class="tooltip-content">
+                      <div class="tooltip-profile">
+                        <img class="tooltip-img" src="{{ url_for('static', filename='images/user.png') }}">
+                        <div class="tooltip-title"><p>John Doe</p></div>
+                        <div class="tooltip-subtitle"><p>University of Michigan</p></div>
+                        <div class="tooltip-edit"><p>Edit Profile</p></div>
+                        <div class="tooltip-note"><p>View notifications</p></div>
+                      </div>
+                      <div class="tooltip-menu">
+                        <div class="tooltip-setting">View Settings</div>
+                        <div class="tooltip-help">View Help</div>
+                      </div>
+                      <div class="tooltip-button text-center">
+                        <i class="fa fa-sign-out"></i>LOGOUT
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+        <div id="cover"></div>
+        <div id="submit_cover"></div>
+        <div id="spin_cover"></div>
+
+        <!-- modal -->
+        <div id="msg_modal" class="modal fade" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h3 class="modal-title text-uppercase">Warning</h3>
+              </div>
+              <div class="modal-body text-center text-uppercase" data-message="">
+                <img src="{{ url_for('static', filename='images/warning-sign.png') }}" class="warning-sign" />
+                <p>Modal body text goes here.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">GOT IT</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          {% block content %}
+          {% endblock %}
+        </div>
+        <!-- /page content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='vendors/jquery/dist/jquery.min.js') }}"></script>
+    <!-- jQuery ui -->
+    <script src="{{ url_for('static', filename='vendors/tocify/libs/jqueryui/jquery-ui-1.9.1.custom.min.js') }}"></script>
+    <!-- Bootstrap -->
+    <script src="{{ url_for('static', filename='vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <!-- Accordion -->
+    <script src="{{ url_for('static', filename='vendors/jquery-accordion/js/jquery.accordion.js') }}"></script>
+    <!-- Slider -->
+    <script src="{{ url_for('static', filename='vendors/slider/js/bootstrap-slider.js') }}"></script>
+    <!-- Tocify -->
+    <script src="{{ url_for('static', filename='vendors/tocify/src/javascripts/jquery.tocify.js') }}"></script>
+    <!-- scrollLock -->
+    <script src="{{ url_for('static', filename='vendors/scrollLock/src/js/jquery.scrollLock.js') }}"></script>
+    <!-- Custom Scripts -->
+    <script src="../static/js/custom.js"></script>
+    <!-- Main Scripts -->
+    <script src="../static/js/app.js"></script>
+    <!-- Help Scripts -->
+    <script src="../static/js/help.js"></script>
+    <!-- loading effect -->
+    <script>
+      $(window).load(function(){
+        // fix refresh tocify pos
+        $(window).scrollTop(0);
+
+        // lock when spining
+        $.scrollLock();
+        $('#submit_cover').hide();
+        $('#spin_cover').hide();
+        $('#cover').fadeOut(1500, function() {
+          $.scrollLock();
+        });
+      });
+    </script>
+  </body>
+</html>

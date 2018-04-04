@@ -1,0 +1,9 @@
+{% macro checkbox(str) -%}
+{% set name, qid = str.split(',') %}
+  <div class="postlab-chkbox-content">
+    <div class="postlab-chkbox">
+      <input id="{{ qid }}-1" name="{{ qid }}-1" type="checkbox">
+      <label for="{{ qid }}-1"><span><span></span></span>{{ name }}</label>
+    </div>
+  </div>
+{%- endmacro %}
